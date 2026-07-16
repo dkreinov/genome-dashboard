@@ -1,9 +1,27 @@
 # 🧬 Genome Dashboard (Claude Code Skill)
 
+> # ⚠️ READ THIS FIRST — no warranty, no liability, not medical advice
+>
+> **This is an educational, curiosity tool. Everything it shows is a *statistical estimate* —
+> population-level associations and probabilities pulled from public research databases. It is
+> NOT fact, NOT a diagnosis, NOT a prediction about you as an individual.** Consumer DNA chips are
+> error-prone, read only a tiny slice of your DNA, and most genetic effects are minuscule and
+> heavily outweighed by lifestyle, environment, age, and chance.
+>
+> **The author and contributors accept NO responsibility and NO liability whatsoever** for any
+> decision, action, health outcome, distress, or consequence arising from this software or its
+> output. It is provided **"AS IS", without warranty of any kind**. **Do NOT** make any medical,
+> health, dietary, lifestyle, reproductive, financial, or other decision based on it. For anything
+> that matters — especially cancer risk, carrier status, or drug response — consult a qualified
+> clinician, an accredited clinical laboratory, and a genetic counselor. A "clear" result here does
+> not rule anything out.
+>
+> **By using this software you accept these terms and use it entirely at your own risk.**
+
 Turn a personal raw DNA file into a single **offline, self-contained HTML dashboard** —
-traits, health, pharmacogenomics, athletic, nutrition, longevity, ancestry (Y & mtDNA
-haplogroups + continental composition + runs of homozygosity), a Neanderthal estimate,
-polygenic risk scores, and an ancestry carrier screen.
+traits, health, pharmacogenomics, athletic, nutrition, longevity, facial tendencies, ancestry
+(Y & mtDNA haplogroups + continental composition + runs of homozygosity), a Neanderthal estimate,
+polygenic risk scores, a carrier screen, and an optional DNA-based portrait.
 
 ## Quick start
 ```
@@ -15,46 +33,37 @@ Open `dashboard.html` in any browser. **Fully offline. Your DNA never leaves the
 - `--out`    output path (default dashboard.html)
 - `--lang ru,es`  add languages (needs `LLM_API_KEY`; a live switch appears in the report)
 - `--images`      decorative hero art (needs `IMAGE_API_KEY`; generic prompts only, never your DNA)
+- `--portrait N`  N speculative DNA-based portrait variants (needs `IMAGE_API_KEY`)
 - `--env path`    a .env file holding optional API keys
 
 No API keys ⇒ English-only, image-free, fully offline (graceful degradation).
 
-## ⚠️ Not medical advice
-Educational only. Consumer chips test a small subset of positions and can err. A genotype is
-a tendency, not a diagnosis. **Confirm anything actionable — especially BRCA / carrier status /
-pharmacogenomics — with an accredited lab and a clinician or genetic counselor.**
+## Example output
+`examples/example_dashboard.html` is a complete dashboard rendered from `examples/mock_person.txt`
+— **fully synthetic, fabricated genotypes, not a real person**. Open it to see what the report
+looks like. Regenerate:
+`python scripts/make_mock.py && python run.py --input examples/mock_person.txt --out examples/example_dashboard.html`
 
 ## How it works / stays generic
-`run.py` → `scripts/run_analysis.py` runs 8 engines over the parsed genotypes + **bundled,
+`run.py` → `scripts/run_analysis.py` runs the engines over the parsed genotypes + **bundled,
 frozen reference data** (`reference/*.json`: SNPedia haplogroup DB, 1000G frequencies, GWAS
 Catalog PRS weights, CPIC/carrier catalogs, mtDNA PhyloTree). No personal data is bundled; the
 SNP catalog is keyed by genotype so it works for anyone. Refresh reference data with
 `python scripts/refresh_reference.py` (opt-in, online).
 
-## Data sources
-SNPedia · Ensembl/1000 Genomes · GWAS Catalog · CPIC/PharmGKB · MITOMAP/PhyloTree · MedlinePlus.
-See `reference/MANIFEST.md`.
-
 ## Getting more markers (imputation vs sequencing)
-
 A genotyping chip reads a fixed subset of positions. Two ways to expand it:
+- **Imputation (free).** TOPMed / Michigan Imputation Server statistically infer tens of millions
+  of extra SNPs from your existing file — no new sample needed.
+- **Whole-genome sequencing (~$200–600).** Reads all ~3 billion bases: rare variants arrays skip,
+  plus things arrays can't resolve — e.g. **CYP2D6 copy number** and **full BRCA / carrier-gene
+  sequencing** (not just founder SNPs).
 
-- **Imputation (free).** Servers like the TOPMed or Michigan Imputation Server statistically
-  infer tens of millions of extra SNPs from your existing file using reference panels — no new
-  sample needed. Good for pulling in more common trait/GWAS markers you didn't get measured.
-- **Whole-genome sequencing (~$200–600).** Reads all ~3 billion bases directly: every known
-  variant, rare variants arrays skip, and things arrays genuinely can't resolve — e.g. **CYP2D6
-  copy number** (why codeine/tamoxifen may be "undetermined") and **full BRCA / carrier-gene
-  sequencing** (not just the founder SNPs).
+Neither meaningfully improves *facial* prediction — facial structure is hugely polygenic and
+environmental, so even a full genome yields only coarse population tendencies, not a face.
 
-**Note on facial prediction:** neither meaningfully improves it. Facial structure is hugely
-polygenic and heavily environmental (age, weight), so even a full genome yields only coarse,
-population-level tendencies — not a face. The real payoff of sequencing is **clinical
-completeness**, not portraits.
-
-## Example output
-
-`examples/example_dashboard.html` is a complete dashboard rendered from
-`examples/mock_person.txt` — **fully synthetic, fabricated genotypes, not a real person**.
-Open it in a browser to see what the report looks like. Regenerate with:
-`python scripts/make_mock.py && python run.py --input examples/mock_person.txt --out examples/example_dashboard.html`
+## Data sources & licensing
+SNPedia · Ensembl/1000 Genomes · GWAS Catalog · CPIC/PharmGKB · MITOMAP/PhyloTree · MedlinePlus.
+See `reference/MANIFEST.md`. **Code** is MIT-licensed (see `LICENSE`). **Bundled reference data**
+retains its original licenses — notably SNPedia content is **CC-BY-SA-NC** (non-commercial,
+share-alike); use accordingly.
