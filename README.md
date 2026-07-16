@@ -1,5 +1,11 @@
 # 🧬 Genome Dashboard (Claude Code Skill)
 
+![License: MIT](https://img.shields.io/badge/license-MIT-blue)
+![Not medical advice](https://img.shields.io/badge/⚠_not-medical_advice-red)
+![Privacy: 100% offline](https://img.shields.io/badge/privacy-100%25_offline-brightgreen)
+![Claude Code Skill](https://img.shields.io/badge/Claude_Code-skill-8A2BE2)
+![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-3776AB?logo=python&logoColor=white)
+
 > # ⚠️ READ THIS FIRST — no warranty, no liability, not medical advice
 >
 > **This is an educational, curiosity tool. Everything it shows is a *statistical estimate* —
@@ -22,6 +28,10 @@ Turn a personal raw DNA file into a single **offline, self-contained HTML dashbo
 traits, health, pharmacogenomics, athletic, nutrition, longevity, facial tendencies, ancestry
 (Y & mtDNA haplogroups + continental composition + runs of homozygosity), a Neanderthal estimate,
 polygenic risk scores, a carrier screen, and an optional DNA-based portrait.
+
+![Example dashboard](docs/screenshot.png)
+
+*Above: the bundled `examples/example_dashboard.html`, rendered from 100% synthetic data (not a real person).*
 
 ## Quick start
 ```
