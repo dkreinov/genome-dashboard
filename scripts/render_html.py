@@ -3,7 +3,7 @@
 English by default; translatable text carries data-en so translate.py can add
 data-<lang> and the built-in switch can swap languages. Images (optional) are
 injected as base64 by gen_images.py before render (passed via `images`)."""
-import html, json, os
+import html, json, os, re
 
 ICONS = {
  "heart":'<path d="M12 20C7 16 3 12.5 3 8.8 3 6.4 4.9 5 7 5c1.6 0 2.9.9 3.5 2C11.1 5.9 12.4 5 14 5c2.1 0 4 1.4 4 3.8 0 3.7-4 7.2-6 9.2z"/>',
@@ -51,8 +51,20 @@ def icon(cat,title,gene):
     name=name or CATICON.get(cat,"sparkle")
     return f'<svg class="isvg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[name]}</svg>'
 
-def _card(m):
-    return (f'<div class="card sev-{m["sev"]}"><div class="card-top"><span class="ico">{icon(m["cat"],m["title"],m["gene"])}</span>'
+def _card(m, disc=False):
+    ico=icon(m["cat"],m["title"],m["gene"])
+    if disc:
+        # collapsed summary (icon · title · result · genotype) + expandable body (text + gene·rsid)
+        return (f'<div class="card collap sev-{m["sev"]}">'
+                f'<button class="csum" aria-expanded="false" onclick="toggleCard(this)">'
+                f'<span class="ico">{ico}</span>'
+                f'<span class="clabel">{esc(m["title"])}</span>'
+                f'<span class="cresult">{T(m["label"])}</span>'
+                f'<span class="cgt">{esc(m["gt"])}</span>'
+                f'<span class="chev" aria-hidden="true">›</span></button>'
+                f'<div class="cbody"><div class="text">{T(m["text"])}</div>'
+                f'<div class="rsid">{esc(m["gene"])} · {esc(m["rsid"])}</div></div></div>')
+    return (f'<div class="card sev-{m["sev"]}"><div class="card-top"><span class="ico">{ico}</span>'
             f'<span class="gene">{esc(m["gene"])}</span><span class="gt">{esc(m["gt"])}</span></div>'
             f'<div class="title">{esc(m["title"])}</div>'
             f'<div class="label">{T(m["label"])}</div><div class="text">{T(m["text"])}</div>'
@@ -68,8 +80,12 @@ def _prs_gauge(s, disc):
             f'<details class="method"><summary>Source &amp; method</summary><div class="mbody">{T(disc["prs"])} '
             f'<a href="{esc(s.get("source_url","https://www.ebi.ac.uk/gwas/"))}" target="_blank" rel="noopener">GWAS Catalog ↗</a></div></details></div>')
 
-def render(analysis, out_path, disclaimers, images=None):
+def _slug(s):
+    return "sec-" + re.sub(r"[^a-z0-9]+", "-", str(s).lower()).strip("-")
+
+def render(analysis, out_path, disclaimers, images=None, opts=None):
     images = images or {}
+    opts = opts or {}          # {"nav":bool, "disclosure":bool, "compact":bool}
     A=analysis
     # ---- stats ----
     y=A["haplo_y"].get("call") or "—"; mt=A["haplo_mt"].get("call") or "—"
@@ -110,7 +126,7 @@ def render(analysis, out_path, disclaimers, images=None):
         gallery="".join(f'<figure class="genimg"><img src="{images[k]}" alt=""></figure>'
                         for k in sorted(images) if k.startswith("portrait_"))
         if gallery: gallery=f'<div class="pgallery">{gallery}</div>'
-        appearance=(f'<h2 class="sec">🎨 {T("How your DNA suggests you might look")}</h2>'
+        appearance=(f'<h2 class="sec" id="sec-look">🎨 {T("How your DNA suggests you might look")}</h2>'
                     f'<div class="viz"><div class="atext">{T(ap["description"].capitalize()+".")}</div>'
                     f'<p class="blurb">⚠ {T(ap["caveat"])}</p>{gallery}</div>')
     # ---- PRS ----
@@ -126,7 +142,7 @@ def render(analysis, out_path, disclaimers, images=None):
                  f'<div class="pgxgene">{esc(v["gene"])} · {esc(v["variant"])} · {esc(v["gt"])}</div>'
                  f'<div class="text">{T(v["text"])}</div>'
                  f'<a class="pgxsrc" href="{esc(v["source"])}" target="_blank" rel="noopener">MedlinePlus ↗</a></div>')
-        carrier_html=(f'<h2 class="sec">🧬 {T("Carrier screen (founder variants)")}</h2>'
+        carrier_html=(f'<h2 class="sec" id="sec-carrier">🧬 {T("Carrier screen (founder variants)")}</h2>'
                       f'<div class="pgxgrid">{cc}</div>'
                       f'<div class="warnbox"><div class="warnh">⚠ {T("Important — what this does NOT tell you")}</div>'
                       f'<div class="warntext">{T(disclaimers["carrier"])}</div></div>')
@@ -141,15 +157,34 @@ def render(analysis, out_path, disclaimers, images=None):
                  f'<div class="pgxgene">{esc(d["gene"])} · {esc(d["gt"])} · {esc(d["phenotype"])}</div>'
                  f'<div class="text">{T(d["text"])}</div>'
                  f'<a class="pgxsrc" href="{esc(d["source"])}" target="_blank" rel="noopener">CPIC ↗</a></div>')
-        pgx_html=(f'<h2 class="sec">💊 {T("Medications (pharmacogenomics)")}</h2>'
+        pgx_html=(f'<h2 class="sec" id="sec-meds">💊 {T("Medications (pharmacogenomics)")}</h2>'
                   f'<p class="blurb">{T(disclaimers["pgx"])}</p><div class="pgxgrid">{pc}</div>')
     # ---- catalog sections + filter ----
+    disc = bool(opts.get("disclosure"))
     sections=""
+    cat_present=[]
     for c in SEV_ORDER:
         items=[m for m in A["catalog"]["markers"] if m["cat"]==c]
         if not items: continue
-        sections+=(f'<section class="catsec"><h2 class="sec">{T(c)}<span class="cnt">{len(items)}</span></h2>'
-                   f'<div class="grid">'+"".join(_card(m) for m in items)+"</div></section>")
+        cat_present.append(c)
+        sections+=(f'<section class="catsec" id="{_slug(c)}"><h2 class="sec">{T(c)}<span class="cnt">{len(items)}</span></h2>'
+                   f'<div class="grid">'+"".join(_card(m, disc) for m in items)+"</div></section>")
+    if disc:
+        sections=('<div class="discctl"><button class="fbtn" onclick="allCards(true)">'+T("Expand all")
+                  +'</button><button class="fbtn" onclick="allCards(false)">'+T("Collapse all")+'</button></div>'+sections)
+
+    # ---- jump-nav (opts.nav) ----
+    nav_items=[("sec-ancestry","🌍 Ancestry"),("sec-prs","📊 Risks")]
+    if carrier_html: nav_items.append(("sec-carrier","🧬 Carrier"))
+    if pgx_html: nav_items.append(("sec-meds","💊 Meds"))
+    if appearance: nav_items.append(("sec-look","🎨 Look"))
+    for c in cat_present: nav_items.append((_slug(c), T(c)))
+    jumpnav = ('<nav class="jumpnav" aria-label="sections">'
+               + "".join(f'<a href="#{i}">{lbl}</a>' for i, lbl in nav_items)
+               + "</nav>") if opts.get("nav") else ""
+    # ---- compact/detailed toggle (opts.compact) ----
+    compact_btn = ('<button class="theme" onclick="toggleDensity()" id="densbtn">▤ '+T("Compact")+'</button>'
+                   if opts.get("compact") else "")
     filterbar=('<div class="filters"><span class="fl">'+T("Filter:")+'</span>'
         +'<button class="fbtn on" data-sev="all" onclick="filterSev(\'all\')">'+T("All")+'</button>'
         +''.join(f'<button class="fbtn" data-sev="{s}" onclick="filterSev(\'{s}\')"><span class="fdot" style="background:{col}"></span>{T(lbl)}</button>'
@@ -157,8 +192,8 @@ def render(analysis, out_path, disclaimers, images=None):
         +'</div>')
     hero=f'<div class="hero"><img src="{images["hero"]}" alt=""></div>' if images.get("hero") else ""
     return _PAGE.format(stats=stat_html, anc=anc_html, appearance=appearance, prs=prs_html, carrier=carrier_html,
-                        pgx=pgx_html, filterbar=filterbar, sections=sections, hero=hero,
-                        disc=T(disclaimers["global"]), lang_switch=_LANG_SWITCH)
+                        pgx=pgx_html, filterbar=filterbar, sections=sections, hero=hero, jumpnav=jumpnav,
+                        compact_btn=compact_btn, disc=T(disclaimers["global"]), lang_switch=_LANG_SWITCH)
 
 # minimal langs the switch offers if translations exist (populated dynamically by JS)
 _LANG_SWITCH = '<button class="theme" onclick="cycleLang()" id="langbtn">🌐 EN</button>'
@@ -200,16 +235,29 @@ h1{{font-size:24px;margin:0;letter-spacing:-.02em}}.controls{{display:flex;gap:8
 .warnbox{{margin-top:16px;background:var(--panel);border:1px solid var(--line);border-inline-start:4px solid var(--watch);border-radius:12px;padding:16px 18px}}.warnh{{font-weight:700;font-size:14px;color:var(--watch);margin-bottom:8px}}.warntext{{font-size:13px;opacity:.9;line-height:1.6}}
 .filters{{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 18px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5}}.fl{{font-size:12.5px;color:var(--mut)}}.fbtn{{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:20px;padding:6px 13px;font-size:13px;cursor:pointer}}.fbtn.on{{background:var(--acc);color:#fff;border-color:var(--acc)}}.fdot{{width:9px;height:9px;border-radius:50%}}
 .disc{{margin-top:32px;font-size:12.5px;color:var(--mut);background:var(--panel);border:1px solid var(--line);border-inline-start:4px solid var(--watch);border-radius:10px;padding:14px 16px}}
-@media print{{:root{{--bg:#fff;--panel:#fff;--ink:#111;--mut:#555;--line:#ccc}}.controls,.filters{{display:none!important}}.card,.pgxcard,.prscard,.apanel{{break-inside:avoid}}.method{{display:none}}}}
+.jumpnav{{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:0;z-index:6;background:var(--bg);padding:10px 0 8px;margin:8px 0 4px;border-bottom:1px solid var(--line)}}
+.jumpnav a{{font-size:12.5px;color:var(--mut);text-decoration:none;padding:5px 11px;border:1px solid var(--line);border-radius:20px;background:var(--panel);white-space:nowrap}}
+.jumpnav a:hover{{color:var(--ink)}}.jumpnav a.active{{background:var(--acc);color:#fff;border-color:var(--acc)}}
+html{{scroll-behavior:smooth}}:target{{scroll-margin-top:110px}}
+.discctl{{display:flex;gap:8px;margin:6px 0 12px}}
+.card.collap .cbody{{display:none}}
+.card .csum{{display:flex;align-items:center;gap:8px;width:100%;background:none;border:none;color:inherit;font:inherit;cursor:pointer;text-align:start;padding:0}}
+.card .csum .clabel{{font-weight:600;font-size:14px}}.card .csum .cresult{{font-size:13px;color:var(--mut)}}.card .csum .cgt{{margin-inline-start:auto;font-family:ui-monospace,monospace;font-size:12px;color:var(--mut);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1px 7px}}
+.card .csum .chev{{color:var(--mut);transition:transform .15s;flex:none}}.card:not(.collap) .csum .chev{{transform:rotate(90deg)}}
+.card .cbody{{margin-top:8px}}
+html[data-density="compact"] .card{{padding:9px 12px}}html[data-density="compact"] .card .text,html[data-density="compact"] .card .rsid{{display:none}}
+html[data-density="compact"] .card .label{{font-size:14px;margin-bottom:0}}html[data-density="compact"] .grid{{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
+@media print{{:root{{--bg:#fff;--panel:#fff;--ink:#111;--mut:#555;--line:#ccc}}.controls,.filters,.jumpnav,.discctl{{display:none!important}}.card,.pgxcard,.prscard,.apanel{{break-inside:avoid}}.method{{display:none}}.card.collap .cbody{{display:block!important}}}}
 </style></head><body><div class="wrap">
 <header><div><h1>🧬 {T_title}</h1><div class="blurb">100% local · nothing uploaded</div></div>
-<div class="controls">{lang_switch}<button class="theme" onclick="window.print()">⬇ PDF</button>
+<div class="controls">{compact_btn}{lang_switch}<button class="theme" onclick="window.print()">⬇ PDF</button>
 <button class="theme" onclick="var r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark'">◐</button></div></header>
 {hero}
 <div class="stats">{stats}</div>
-<h2 class="sec">🌍 {T_anc}</h2>{anc}
+{jumpnav}
+<h2 class="sec" id="sec-ancestry">🌍 {T_anc}</h2>{anc}
 {appearance}
-<h2 class="sec">📊 {T_prs}</h2><div class="prsgrid">{prs}</div>
+<h2 class="sec" id="sec-prs">📊 {T_prs}</h2><div class="prsgrid">{prs}</div>
 {carrier}
 {pgx}
 {filterbar}
@@ -232,6 +280,10 @@ function filterSev(s){{
   document.querySelectorAll('.fbtn').forEach(function(b){{b.classList.toggle('on',b.getAttribute('data-sev')===s);}});
   document.querySelectorAll('.catsec').forEach(function(sec){{var v=0;sec.querySelectorAll('.card').forEach(function(c){{var sh=s==='all'||c.classList.contains('sev-'+s);c.style.display=sh?'':'none';if(sh)v++;}});sec.style.display=v?'':'none';}});
 }}
+function toggleCard(b){{var c=b.closest('.card');var open=c.classList.contains('collap');c.classList.toggle('collap',!open);b.setAttribute('aria-expanded',open?'true':'false');}}
+function allCards(open){{document.querySelectorAll('.card').forEach(function(c){{c.classList.toggle('collap',!open);var b=c.querySelector('.csum');if(b)b.setAttribute('aria-expanded',open?'true':'false');}});}}
+function toggleDensity(){{var r=document.documentElement;var on=r.getAttribute('data-density')==='compact';if(on)r.removeAttribute('data-density');else r.setAttribute('data-density','compact');var el=document.getElementById('densbtn');if(el)el.textContent=(on?'▤ ':'▦ ')+(on?'Compact':'Detailed');}}
+(function(){{var nav=document.querySelector('.jumpnav');if(!nav||!('IntersectionObserver' in window))return;var links=[].slice.call(nav.querySelectorAll('a'));var map={{}};links.forEach(function(a){{map[a.getAttribute('href').slice(1)]=a;}});var obs=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting){{links.forEach(function(a){{a.classList.remove('active');}});var a=map[e.target.id];if(a)a.classList.add('active');}}}});}},{{rootMargin:'-45% 0px -50% 0px'}});Object.keys(map).forEach(function(id){{var el=document.getElementById(id);if(el)obs.observe(el);}});}})();
 </script></body></html>"""
 # fill fixed English section titles
 _PAGE = _PAGE.replace("{T_title}", T("Genome Dashboard")).replace("{T_anc}", T("Ancestry")).replace("{T_prs}", T("Polygenic risk scores"))

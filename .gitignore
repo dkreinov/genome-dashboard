@@ -3,3 +3,6 @@ results/*
 __pycache__/
 *.pyc
 .env
+
+# UX preview variants (throwaway)
+examples/preview_*.html
