@@ -33,6 +33,26 @@ polygenic risk scores, a carrier screen, and an optional DNA-based portrait.
 
 *Above: the bundled `examples/example_dashboard.html`, rendered from 100% synthetic data (not a real person).*
 
+<details open>
+<summary><b>More screenshots</b> (all from the synthetic example)</summary>
+
+**Polygenic risk scores** — GWAS-Catalog-weighted, with source & method per trait
+![Polygenic risk scores](docs/shot_risk.png)
+
+**Medications (pharmacogenomics)** — CPIC guidance, colour-coded avoid / caution / adjust / reassuring
+![Medications](docs/shot_meds.png)
+
+**Ancestry carrier screen** — founder variants with a prominent "what this does NOT tell you"
+![Carrier screen](docs/shot_carrier.png)
+
+**Facial tendencies** — every card capped as a <1% population trend, never a face reading
+![Facial tendencies](docs/shot_facial.png)
+
+**Trait cards** — genotype-keyed, filterable, with per-gene icons
+![Trait cards](docs/shot_traits.png)
+
+</details>
+
 ## Quick start
 ```
 python run.py --input your_raw_dna.txt --out dashboard.html
