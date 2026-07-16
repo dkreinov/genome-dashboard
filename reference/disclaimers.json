@@ -1,0 +1,8 @@
+{
+ "global": "Educational, NOT medical advice or a diagnosis. Consumer genotyping tests a small subset of positions and can err. A genotype is a tendency shaped by lifestyle, environment and thousands of untested genes. Your raw data never left this machine.",
+ "prs": "A polygenic score is a genetic tendency across many small-effect variants, standardized to a European reference distribution — NOT a diagnosis or a lifetime risk. Diet, weight, blood pressure, age and luck matter as much or more.",
+ "pgx": "Pharmacogenomics is educational only. Never start, stop or change any medication without your doctor or pharmacist. Show them these results if a listed drug is ever considered; decisions need clinical-grade genotyping.",
+ "carrier": "This tests only a few specific founder variants — NOT the whole genes, which can carry thousands of other mutations found only by full clinical sequencing. Consumer chips misread rare indels; a clear result does not rule out risk. For family planning or a family cancer history, see a genetic counselor for a clinical panel. Especially for BRCA, confirm anything with an accredited lab.",
+ "ancestry": "Haplogroup and continental-ancestry calls are best-estimates from a limited marker set; sub-population and exact subclade calls need dedicated tools.",
+ "neanderthal": "A small marker panel — illustrative carriage, not a precise genome-wide percentage."
+}

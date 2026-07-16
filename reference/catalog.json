@@ -1,0 +1,2463 @@
+[
+{
+"rsid": "rs762551",
+"gene": "CYP1A2",
+"cat": "Traits",
+"title": "Caffeine metabolism",
+"gt": {
+"AA": [
+"Fast metabolizer",
+"Your body has a super-speedy 'coffee cleaner.' Caffeine gets mopped up fast, so an afternoon coffee is less likely to keep you awake at night. Fast cleaners may even get a little heart benefit from moderate coffee.",
+"good"
+],
+"AC": [
+"Slow metabolizer",
+"Your coffee cleaner works slowly, so caffeine hangs around for hours — a late latte can steal your sleep.",
+"info"
+],
+"CC": [
+"Slow metabolizer",
+"Your coffee cleaner is the slow type — caffeine lingers a long time, and lots of it can nudge blood pressure up.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs4988235",
+"gene": "MCM6/LCT",
+"cat": "Traits",
+"title": "Lactose (milk sugar)",
+"gt": {
+"AA": [
+"Lactose tolerant",
+"You kept the 'milk-digesting tool' switched on as a grown-up, so dairy sits fine.",
+"good"
+],
+"AG": [
+"Likely tolerant",
+"One copy of the milk-digesting switch is on — usually enough to handle dairy.",
+"good"
+],
+"GG": [
+"Likely lactose intolerant",
+"Like most adults in the world, your milk-digesting tool switched off after childhood. Big glasses of milk or lots of cheese may cause bloating or a tummy ache.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs713598",
+"gene": "TAS2R38",
+"cat": "Traits",
+"title": "Bitter taste",
+"gt": {
+"CC": [
+"Non-taster",
+"Your bitter-detector is turned down, so broccoli and black coffee taste pretty mild to you.",
+"info"
+],
+"CG": [
+"Medium taster",
+"You carry one 'taster' copy here — a medium bitter-detector. (Full PTC/bitter tasting is set by a 3-marker combination; this is just one of the three, so 'intermediate' is an estimate.)",
+"info"
+],
+"GG": [
+"Super-taster",
+"Your bitter-detector is cranked to max — Brussels sprouts and tonic water can taste harsh.",
+"info"
+]
+}
+},
+{
+"rsid": "rs17822931",
+"gene": "ABCC11",
+"cat": "Traits",
+"title": "Earwax & body odor",
+"gt": {
+"CC": [
+"Wet earwax",
+"You have the 'wet' earwax type and normal sweat-smell — the version most people outside East Asia carry.",
+"info"
+],
+"CT": [
+"Wet earwax",
+"Wet earwax type (this version wins even with one copy).",
+"info"
+],
+"TT": [
+"Dry earwax",
+"Dry, flaky earwax — and a bonus: much less body odor.",
+"info"
+]
+}
+},
+{
+"rsid": "rs671",
+"gene": "ALDH2",
+"cat": "Traits",
+"title": "Alcohol flush",
+"gt": {
+"GG": [
+"No flush",
+"Your alcohol 'clean-up crew' works fully, so you don't turn red or feel sick from a drink the way some people do.",
+"good"
+],
+"AG": [
+"Flush reaction",
+"Your alcohol clean-up crew is half-strength — drinking makes you flush, feel warm or queasy, and raises health risks.",
+"watch"
+],
+"AA": [
+"Strong flush",
+"Your clean-up crew barely works — alcohol builds up a toxin fast, causing strong flushing and real cancer risk if you drink.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs1229984",
+"gene": "ADH1B",
+"cat": "Traits",
+"title": "Alcohol breakdown speed",
+"gt": {
+"CC": [
+"Standard speed",
+"You break alcohol down at the usual, steady pace common in Europe.",
+"info"
+],
+"CT": [
+"Faster",
+"One 'fast' copy — you turn alcohol into its next form more quickly.",
+"info"
+],
+"TT": [
+"Fast",
+"You break alcohol down quickly, which often means less craving for it.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1815739",
+"gene": "ACTN3",
+"cat": "Traits",
+"title": "Muscle type (sprinter gene)",
+"gt": {
+"CC": [
+"Power / sprinter",
+"You have both copies of a muscle protein that helps with explosive power — the 'sprinter' build seen in lots of top sprinters and weightlifters.",
+"good"
+],
+"CT": [
+"Mixed",
+"A blend of power and stamina muscle fibers — a bit of both worlds.",
+"info"
+],
+"TT": [
+"Endurance",
+"You're missing that fast-twitch protein, which leans your muscles toward endurance over raw sprinting power.",
+"info"
+]
+}
+},
+{
+"rsid": "rs53576",
+"gene": "OXTR",
+"cat": "Traits",
+"title": "Oxytocin receptor (empathy)",
+"gt": {
+"GG": [
+"Warm wiring",
+"Your 'cuddle hormone' receiver is the version popularly tied to more empathy/warmth — but this link is weak and poorly replicated, so treat it as trivia, not a real read on your character.",
+"info"
+],
+"AG": [
+"In between",
+"A middle version of the empathy receiver.",
+"info"
+],
+"AA": [
+"Other version",
+"The version weakly tied to being a bit more reserved under stress.",
+"info"
+]
+}
+},
+{
+"rsid": "rs6265",
+"gene": "BDNF",
+"cat": "Traits",
+"title": "Brain 'fertilizer' (memory)",
+"gt": {
+"CC": [
+"Val/Val",
+"Your brain makes its 'growth fertilizer' the standard way — baseline memory and learning wiring.",
+"info"
+],
+"CT": [
+"Val/Met",
+"You carry one copy of a variant that slightly changes how your brain stores memories and can make you a touch more sensitive to stress.",
+"info"
+],
+"TT": [
+"Met/Met",
+"Two copies of that variant — a bigger version of the same small effect.",
+"info"
+]
+}
+},
+{
+"rsid": "rs4680",
+"gene": "COMT",
+"cat": "Traits",
+"title": "COMT — 'Worrier vs Warrior'",
+"gt": {
+"AA": [
+"Worrier",
+"You clear the focus-chemical dopamine slowly in your thinking-brain — weakly linked to sharper memory but more stress/pain sensitivity (the pop-science 'worrier'). The genotype is real; the personality label is a small, much-debated effect, not a verdict.",
+"info"
+],
+"AG": [
+"In between",
+"A balanced mix of 'worrier' and 'warrior'.",
+"info"
+],
+"GG": [
+"Warrior",
+"You clear dopamine fast — cooler under pressure and pain (the 'warrior'), but with a slightly lower baseline for deep focus.",
+"info"
+]
+}
+},
+{
+"rsid": "rs12913832",
+"gene": "HERC2/OCA2",
+"cat": "Traits",
+"title": "Eye color",
+"gt": {
+"AA": [
+"Likely blue",
+"The main 'blue eyes' genotype.",
+"info"
+],
+"AG": [
+"Blue (with your modifiers)",
+"This main eye-color gene alone leans brown/intermediate — but eye color is polygenic, and your blue-associated modifiers (rs1667394 TT + OCA2) tip you to blue. Your eyes are in fact blue, which the full panel predicts correctly; the single-SNP call would have missed it.",
+"info"
+],
+"GG": [
+"Likely brown",
+"The brown-eye genotype.",
+"info"
+]
+}
+},
+{
+"rsid": "rs12203592",
+"gene": "IRF4",
+"cat": "Traits",
+"title": "Freckles & sun sensitivity",
+"gt": {
+"CC": [
+"Fewer freckles",
+"Less freckling as a kid.",
+"info"
+],
+"CT": [
+"Some freckles",
+"In-between — some freckling and sun-sensitive skin.",
+"info"
+],
+"TT": [
+"Freckle-prone",
+"The freckle version — freckles, often brown hair, and skin that burns more easily. Sunscreen is your friend.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1426654",
+"gene": "SLC24A5",
+"cat": "Traits",
+"title": "Skin shade (gene 1)",
+"gt": {
+"AA": [
+"Lighter",
+"Two copies of the big European light-skin switch.",
+"info"
+],
+"AG": [
+"In between",
+"",
+"info"
+],
+"GG": [
+"Darker",
+"The ancestral, darker-skin version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs16891982",
+"gene": "SLC45A2",
+"cat": "Traits",
+"title": "Skin shade (gene 2)",
+"gt": {
+"GG": [
+"Lighter",
+"A second light-skin switch, also on — together with the first it points to fair skin.",
+"info"
+],
+"CG": [
+"In between",
+"",
+"info"
+],
+"CC": [
+"Darker",
+"The ancestral, darker-skin version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1393350",
+"gene": "TYR",
+"cat": "Traits",
+"title": "Pigment maker (TYR)",
+"gt": {
+"GG": [
+"More pigment",
+"Standard pigment production.",
+"info"
+],
+"AG": [
+"Slightly less",
+"One copy of a variant that dials pigment down a touch — linked to lighter eyes and a few more freckles.",
+"info"
+],
+"AA": [
+"Less pigment",
+"Two copies — a bit less pigment, lighter coloring.",
+"info"
+]
+}
+},
+{
+"rsid": "rs72921001",
+"gene": "OR6A2",
+"cat": "Traits",
+"title": "Cilantro = soap?",
+"gt": {
+"CC": [
+"Tastes soapy",
+"Your smell-gene version is the one associated with cilantro tasting soapy — though the effect is small and mostly down to exposure/habit, so it's a mild predisposition, not a guarantee.",
+"info"
+],
+"AC": [
+"Maybe soapy",
+"You might catch a soapy note in cilantro.",
+"info"
+],
+"AA": [
+"Tastes fresh",
+"Cilantro tastes green and herby to you, no soap.",
+"info"
+]
+}
+},
+{
+"rsid": "rs73598374",
+"gene": "ADA",
+"cat": "Traits",
+"title": "How deep you sleep",
+"gt": {
+"CC": [
+"Typical sleep",
+"Normal depth of deep sleep.",
+"info"
+],
+"CT": [
+"Deeper sleep",
+"You're wired for extra-deep sleep and a strong 'sleep pressure' — you likely conk out hard.",
+"info"
+],
+"TT": [
+"Deeper sleep",
+"A stronger version of the deep-sleep trait.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1805007",
+"gene": "MC1R",
+"cat": "Traits",
+"title": "Red-hair switch (R151C)",
+"gt": {
+"CC": [
+"Not a carrier",
+"You don't carry this red-hair variant.",
+"info"
+],
+"CT": [
+"Carrier",
+"One red-hair copy — possible reddish tint and more sun sensitivity.",
+"info"
+],
+"TT": [
+"Two copies",
+"Red-hair associated.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1805008",
+"gene": "MC1R",
+"cat": "Traits",
+"title": "Red-hair switch (R160W)",
+"gt": {
+"CC": [
+"Not a carrier",
+"You don't carry this red-hair variant.",
+"info"
+],
+"CT": [
+"Carrier",
+"One red-hair copy.",
+"info"
+],
+"TT": [
+"Two copies",
+"Red-hair associated.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1042713",
+"gene": "ADRB2",
+"cat": "Traits",
+"title": "Lung receptor (ADRB2)",
+"gt": {
+"GG": [
+"Gly/Gly",
+"A version of the airway receptor that asthma inhalers (like albuterol) act on — the Gly/Gly type can respond a bit differently to those relievers.",
+"info"
+],
+"AG": [
+"Arg/Gly",
+"Mixed version.",
+"info"
+],
+"AA": [
+"Arg/Arg",
+"The other version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs6313",
+"gene": "HTR2A",
+"cat": "Traits",
+"title": "Serotonin receptor",
+"gt": {
+"AA": [
+"Variant/variant",
+"A common version of a serotonin 'antenna' in the brain, studied for links to mood and how some antidepressants feel — effects are small.",
+"info"
+],
+"AG": [
+"Mixed",
+"One of each version.",
+"info"
+],
+"GG": [
+"Standard",
+"Standard version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs4570625",
+"gene": "TPH2",
+"cat": "Traits",
+"title": "Serotonin factory (TPH2)",
+"gt": {
+"GG": [
+"Standard",
+"Standard rate of building serotonin in the brain.",
+"info"
+],
+"GT": [
+"Mixed",
+"One copy of a variant weakly tied to mood/anxiety differences — a very small effect.",
+"info"
+],
+"TT": [
+"Variant",
+"Two copies of that variant.",
+"info"
+]
+}
+},
+{
+"rsid": "rs8176719",
+"gene": "ABO",
+"cat": "Traits",
+"title": "Blood type (ABO)",
+"gt": {
+"DD": [
+"Type O",
+"Both copies carry the tiny DNA deletion that switches off the A/B sugar-coating on your blood cells — so your blood type is O, the universal donor.",
+"good"
+],
+"DI": [
+"Type A or B",
+"You carry one working ABO copy — type A, B (or AB), not O.",
+"info"
+],
+"II": [
+"Type A/B/AB",
+"Two working ABO copies — not type O.",
+"info"
+]
+}
+},
+{
+"rsid": "rs601338",
+"gene": "FUT2",
+"cat": "Traits",
+"title": "Norovirus 'super-dodger' (secretor)",
+"gt": {
+"AA": [
+"Non-secretor",
+"Both copies of the FUT2 gene are switched off, so most strains of norovirus (the winter 'stomach flu') literally can't dock onto your gut — you're naturally resistant. Trade-off: a different gut-microbe mix.",
+"good"
+],
+"AG": [
+"Secretor",
+"You secrete blood-group sugars in saliva/gut — the usual state, norovirus-susceptible.",
+"info"
+],
+"GG": [
+"Secretor",
+"Secretor — norovirus-susceptible like most people.",
+"info"
+]
+}
+},
+{
+"rsid": "rs10427255",
+"gene": "ACHOO/TARS",
+"cat": "Traits",
+"title": "Sun sneeze (photic reflex)",
+"gt": {
+"CC": [
+"Likely sun-sneezer",
+"Step into bright sunlight and you probably sneeze — the quirky 'photic sneeze reflex', shared by about 1 in 4 people.",
+"info"
+],
+"CT": [
+"Maybe",
+"You might sneeze in bright light.",
+"info"
+],
+"TT": [
+"Unlikely",
+"Bright light probably doesn't make you sneeze.",
+"info"
+]
+}
+},
+{
+"rsid": "rs838133",
+"gene": "FGF21",
+"cat": "Traits",
+"title": "Sweet tooth",
+"gt": {
+"AA": [
+"Sweet tooth",
+"A version of the FGF21 'appetite hormone' gene weakly linked to preferring sweets/carbs — a small nudge, not the reason for your dessert choices.",
+"info"
+],
+"AG": [
+"Some",
+"A middling sweet preference.",
+"info"
+],
+"GG": [
+"Less",
+"Less genetic pull toward sweets.",
+"info"
+]
+}
+},
+{
+"rsid": "rs4481887",
+"gene": "OR2M7",
+"cat": "Traits",
+"title": "Asparagus pee smell",
+"gt": {
+"AG": [
+"Can smell it",
+"You can most likely smell the funny odor asparagus gives urine — a smell many people are genetically blind to.",
+"info"
+],
+"GG": [
+"Can smell it",
+"You can detect asparagus urine odor.",
+"info"
+],
+"AA": [
+"Can't smell it",
+"You're probably 'asparagus-anosmic' — can't smell it at all.",
+"info"
+]
+}
+},
+{
+"rsid": "rs6746030",
+"gene": "SCN9A",
+"cat": "Traits",
+"title": "Pain sensitivity",
+"gt": {
+"GG": [
+"Typical",
+"You have the common version of a key pain-signal gene — average pain sensitivity.",
+"good"
+],
+"AG": [
+"Higher",
+"One copy of a variant tied to feeling pain a bit more intensely.",
+"info"
+],
+"AA": [
+"Higher",
+"Two copies — tends toward higher pain sensitivity.",
+"info"
+]
+}
+},
+{
+"rsid": "rs324420",
+"gene": "FAAH",
+"cat": "Traits",
+"title": "'Bliss' gene (anxiety/pain)",
+"gt": {
+"CC": [
+"Standard",
+"Standard breakdown of anandamide, your natural 'bliss molecule'.",
+"info"
+],
+"AC": [
+"One easy-going copy",
+"You carry one copy of a variant that lets your natural 'bliss molecule' linger longer — weakly linked to lower anxiety and a higher pain threshold.",
+"info"
+],
+"AA": [
+"Two copies",
+"Two copies of the calmer variant — a bigger version of the same.",
+"good"
+]
+}
+},
+{
+"rsid": "rs17070145",
+"gene": "KIBRA",
+"cat": "Traits",
+"title": "Episodic memory",
+"gt": {
+"CC": [
+"Average",
+"The common version of a memory gene — average episodic ('what happened when') memory.",
+"info"
+],
+"CT": [
+"Slight boost",
+"One copy of the T variant linked to slightly sharper episodic memory.",
+"info"
+],
+"TT": [
+"Boost",
+"Two copies of the memory-boost variant.",
+"good"
+]
+}
+},
+{
+"rsid": "rs1801260",
+"gene": "CLOCK",
+"cat": "Traits",
+"title": "Body-clock (morning/evening)",
+"gt": {
+"AA": [
+"Earlier",
+"Leans toward being a morning person.",
+"info"
+],
+"AG": [
+"Slightly evening",
+"One copy of an 'evening person' body-clock variant — you may drift a little later than average.",
+"info"
+],
+"GG": [
+"Evening",
+"Leans toward being a night owl.",
+"info"
+]
+}
+},
+{
+"rsid": "rs2472297",
+"gene": "CYP1A1-CYP1A2",
+"cat": "Traits",
+"title": "Coffee intake tendency",
+"gt": {
+"CC": [
+"Drinks less",
+"Interestingly, a version linked to drinking LESS coffee on average — even though your CYP1A2 clears caffeine fast.",
+"info"
+],
+"CT": [
+"Average",
+"Average coffee-drinking tendency.",
+"info"
+],
+"TT": [
+"Drinks more",
+"Linked to drinking more coffee.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1800497",
+"gene": "ANKK1/DRD2",
+"cat": "Traits",
+"title": "Reward & dopamine (Taq1A)",
+"gt": {
+"GG": [
+"Common",
+"Standard density of dopamine D2 'reward' receptors.",
+"info"
+],
+"AG": [
+"One A1 copy",
+"One copy of the 'A1' variant, tied to somewhat fewer dopamine reward-receptors — studied (loosely) in reward-seeking and habit-forming.",
+"info"
+],
+"AA": [
+"Two A1 copies",
+"Two A1 copies — a stronger version of the same association.",
+"info"
+]
+}
+},
+{
+"rsid": "rs2180439",
+"gene": "20p11",
+"cat": "Traits",
+"title": "Male-pattern baldness locus",
+"gt": {
+"CC": [
+"Lower",
+"Lower-risk version at this baldness hotspot.",
+"info"
+],
+"CT": [
+"Intermediate",
+"One risk copy at a major hair-loss locus — a modest nudge (baldness is very polygenic and also runs via the mother's side).",
+"info"
+],
+"TT": [
+"Higher",
+"Two risk copies at this locus.",
+"info"
+]
+}
+},
+{
+"rsid": "rs662799",
+"gene": "APOA5",
+"cat": "Health",
+"title": "Triglyceride response",
+"gt": {
+"AA": [
+"Typical",
+"Common version — typical blood-triglyceride response to fatty/carby meals.",
+"good"
+],
+"AG": [
+"Higher",
+"One copy tied to higher triglycerides, especially on high-fat diets.",
+"info"
+],
+"GG": [
+"Higher",
+"Two copies — higher triglyceride tendency.",
+"info"
+]
+}
+},
+{
+"rsid": "rs4244285",
+"gene": "CYP2C19*2",
+"cat": "Pharmacogenomics",
+"title": "Clopidogrel / stomach-acid pills (*2)",
+"gt": {
+"GG": [
+"Normal",
+"Your liver 'drug processor' CYP2C19 works normally here.",
+"good"
+],
+"AG": [
+"Intermediate",
+"One copy of this liver processor is broken. The blood-thinner clopidogrel (Plavix) needs this enzyme to switch on, so it works less well for you; acid-reducers like omeprazole stick around longer. Worth telling a doctor if ever prescribed these.",
+"watch"
+],
+"AA": [
+"Poor",
+"Both copies broken — clopidogrel would work poorly.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs12248560",
+"gene": "CYP2C19*17",
+"cat": "Pharmacogenomics",
+"title": "CYP2C19 'fast' switch (*17)",
+"gt": {
+"CC": [
+"No fast copy",
+"No speed-up variant.",
+"info"
+],
+"CT": [
+"One fast copy",
+"Somewhat faster drug clearing.",
+"info"
+],
+"TT": [
+"Ultra-fast",
+"Clears these drugs very quickly.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1057910",
+"gene": "CYP2C9*3",
+"cat": "Pharmacogenomics",
+"title": "Blood thinner / painkiller sensitivity (*3)",
+"gt": {
+"AA": [
+"Normal",
+"Normal processing.",
+"good"
+],
+"AC": [
+"Intermediate",
+"One slow copy of another liver processor. You're more sensitive to the blood-thinner warfarin and some anti-inflammatory painkillers, so doctors would start you on a lower dose.",
+"watch"
+],
+"CC": [
+"Poor",
+"Strongly sensitive to these drugs.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs9923231",
+"gene": "VKORC1",
+"cat": "Pharmacogenomics",
+"title": "Warfarin dose sensor",
+"gt": {
+"CC": [
+"Standard dose",
+"Normal sensitivity — standard warfarin dose at this gene.",
+"good"
+],
+"CT": [
+"More sensitive",
+"You'd need a lower warfarin dose.",
+"watch"
+],
+"TT": [
+"Very sensitive",
+"Much lower warfarin dose.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs4149056",
+"gene": "SLCO1B1",
+"cat": "Pharmacogenomics",
+"title": "Statin muscle-ache risk",
+"gt": {
+"TT": [
+"Low risk",
+"Your muscle-protecting transporter works well, so cholesterol 'statin' pills are less likely to give you muscle aches.",
+"good"
+],
+"CT": [
+"Higher risk",
+"A weaker transporter — higher chance of statin muscle pain, especially simvastatin.",
+"watch"
+],
+"CC": [
+"High risk",
+"Much higher chance of statin muscle pain.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs1799853",
+"gene": "CYP2C9*2",
+"cat": "Pharmacogenomics",
+"title": "CYP2C9 variant *2",
+"gt": {
+"CC": [
+"Normal",
+"No *2 slow-down variant.",
+"good"
+],
+"CT": [
+"Intermediate",
+"One slower copy — adds to warfarin/NSAID sensitivity.",
+"watch"
+],
+"TT": [
+"Poor",
+"Two slower copies.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs776746",
+"gene": "CYP3A5",
+"cat": "Pharmacogenomics",
+"title": "CYP3A5 (transplant drugs)",
+"gt": {
+"TT": [
+"Non-expressor",
+"Like most people of European descent, this drug-processing enzyme is switched off. It matters mainly for the transplant drug tacrolimus — non-expressors need lower doses.",
+"info"
+],
+"CT": [
+"Expressor",
+"You make this enzyme — faster clearing of some drugs.",
+"info"
+],
+"CC": [
+"Expressor",
+"Full enzyme activity.",
+"info"
+]
+}
+},
+{
+"rsid": "rs6025",
+"gene": "F5",
+"cat": "Health",
+"title": "Factor V Leiden (blood clots)",
+"gt": {
+"CC": [
+"Not a carrier",
+"Your clotting 'off-switch' works normally — you don't carry the common thrombophilia variant.",
+"good"
+],
+"CT": [
+"Carrier",
+"One copy makes blood a bit 'stickier' — higher risk of leg/lung clots, especially with long flights, surgery or estrogen.",
+"watch"
+],
+"TT": [
+"Two copies",
+"High clot risk.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs1800562",
+"gene": "HFE C282Y",
+"cat": "Health",
+"title": "Iron overload — main variant",
+"gt": {
+"GG": [
+"Not a carrier",
+"You don't carry the main 'iron hoarding' variant, so hereditary hemochromatosis is very unlikely.",
+"good"
+],
+"AG": [
+"Carrier",
+"One copy of the main iron-overload variant.",
+"watch"
+],
+"AA": [
+"Two copies",
+"The main genotype for iron overload — body can store too much iron over time.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs1799945",
+"gene": "HFE H63D",
+"cat": "Health",
+"title": "Iron overload — minor variant",
+"gt": {
+"CC": [
+"Not a carrier",
+"No minor iron variant.",
+"good"
+],
+"CG": [
+"Carrier (H63D)",
+"You carry one copy of the milder iron variant. On its own it rarely causes problems (and you're clear on the main one) — but it's a good reason to have your iron (ferritin) checked once as an adult.",
+"note"
+],
+"GG": [
+"Two copies",
+"Two mild copies — usually still mild.",
+"note"
+]
+}
+},
+{
+"rsid": "rs1801133",
+"gene": "MTHFR C677T",
+"cat": "Health",
+"title": "MTHFR (folate helper)",
+"gt": {
+"GG": [
+"Full speed",
+"Your folate-processing enzyme runs at full speed.",
+"good"
+],
+"AG": [
+"One copy",
+"About two-thirds speed — usually no real effect.",
+"note"
+],
+"AA": [
+"Two copies (677TT)",
+"Your folate-processing enzyme runs at roughly one-third speed. This is super common and usually harmless — the practical takeaway is just to get enough folate (leafy greens, beans). Can nudge a blood marker called homocysteine up a little.",
+"note"
+]
+}
+},
+{
+"rsid": "rs1801131",
+"gene": "MTHFR A1298C",
+"cat": "Health",
+"title": "MTHFR (second spot)",
+"gt": {
+"TT": [
+"Normal",
+"No variant at this second MTHFR spot.",
+"good"
+],
+"GT": [
+"One copy",
+"",
+"note"
+],
+"GG": [
+"Two copies",
+"",
+"note"
+]
+}
+},
+{
+"rsid": "rs7903146",
+"gene": "TCF7L2",
+"cat": "Health",
+"title": "Type-2 diabetes (biggest common gene)",
+"gt": {
+"CC": [
+"Lower risk",
+"You have the safer version of the single most important common diabetes gene.",
+"good"
+],
+"CT": [
+"Slightly higher",
+"One risk copy — a modest bump in type-2 diabetes odds.",
+"watch"
+],
+"TT": [
+"Higher",
+"Two risk copies — about double the baseline odds.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs1801282",
+"gene": "PPARG",
+"cat": "Health",
+"title": "PPARG (diabetes protector)",
+"gt": {
+"CC": [
+"Common version",
+"You have the common version. A rare 'Ala' version gives a little extra protection from type-2 diabetes; you don't carry it, so just baseline here.",
+"note"
+],
+"CG": [
+"Protective carrier",
+"You carry one copy of the protective 'Ala' variant — a small shield against type-2 diabetes.",
+"good"
+],
+"GG": [
+"Two protective",
+"Two protective copies.",
+"good"
+]
+}
+},
+{
+"rsid": "rs13266634",
+"gene": "SLC30A8",
+"cat": "Health",
+"title": "Zinc & insulin (SLC30A8)",
+"gt": {
+"TT": [
+"Lower risk",
+"",
+"good"
+],
+"CT": [
+"Slightly higher",
+"One risk copy for type-2 diabetes at this zinc-transport gene.",
+"note"
+],
+"CC": [
+"Common risk version",
+"The common higher-risk version of a gene that helps insulin-making cells use zinc — a small solo effect.",
+"note"
+]
+}
+},
+{
+"rsid": "rs10811661",
+"gene": "CDKN2A/B",
+"cat": "Health",
+"title": "Beta-cell gene (CDKN2A/B)",
+"gt": {
+"CC": [
+"Lower risk",
+"",
+"good"
+],
+"CT": [
+"Slightly higher",
+"One risk copy.",
+"note"
+],
+"TT": [
+"Common risk version",
+"The common higher-risk version near a gene that keeps insulin-making cells healthy — small effect.",
+"note"
+]
+}
+},
+{
+"rsid": "rs2237892",
+"gene": "KCNQ1",
+"cat": "Health",
+"title": "KCNQ1 (insulin release)",
+"gt": {
+"CC": [
+"Common version",
+"A version tied to slightly lower insulin release (a bigger deal in East Asian populations, small in Europeans).",
+"note"
+],
+"CT": [
+"In between",
+"",
+"note"
+],
+"TT": [
+"Lower risk",
+"",
+"good"
+]
+}
+},
+{
+"rsid": "rs2231142",
+"gene": "ABCG2",
+"cat": "Health",
+"title": "Gout / uric acid",
+"gt": {
+"GG": [
+"Normal",
+"Your kidney's uric-acid 'trash chute' works normally, keeping gout risk low.",
+"good"
+],
+"GT": [
+"Reduced",
+"One weaker copy — uric acid clears less well, raising gout risk.",
+"watch"
+],
+"TT": [
+"Strongly reduced",
+"Higher gout risk.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs9939609",
+"gene": "FTO",
+"cat": "Health",
+"title": "Appetite / weight gene (FTO)",
+"gt": {
+"TT": [
+"Lower",
+"No FTO appetite-risk copy.",
+"good"
+],
+"AT": [
+"One copy",
+"One copy of the best-known 'appetite' gene — a small nudge toward feeling hungrier and gaining weight more easily. Habits easily outweigh it.",
+"note"
+],
+"AA": [
+"Two copies",
+"Two copies — a bigger appetite nudge.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs17782313",
+"gene": "MC4R",
+"cat": "Health",
+"title": "Fullness signal (MC4R)",
+"gt": {
+"TT": [
+"Lower risk",
+"You have the version tied to feeling full normally — lower appetite-driven weight gain.",
+"good"
+],
+"CT": [
+"Slightly higher",
+"One copy tied to a slightly weaker 'I'm full' signal.",
+"note"
+],
+"CC": [
+"Higher",
+"Two copies — a bit more appetite drive.",
+"note"
+]
+}
+},
+{
+"rsid": "rs2187668",
+"gene": "HLA-DQ",
+"cat": "Health",
+"title": "Celiac disease risk tag",
+"gt": {
+"CC": [
+"Low risk",
+"You don't carry the main celiac-risk immune tag, so celiac disease is unlikely for you.",
+"good"
+],
+"CT": [
+"Risk tag carrier",
+"You carry the celiac-risk immune type — most carriers never get it, but it's possible.",
+"watch"
+],
+"TT": [
+"Two copies",
+"Higher celiac susceptibility.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs3761847",
+"gene": "TRAF1/C5",
+"cat": "Health",
+"title": "Rheumatoid arthritis gene",
+"gt": {
+"AA": [
+"Lower",
+"",
+"good"
+],
+"AG": [
+"In between",
+"One copy of a common variant slightly linked to rheumatoid arthritis (an autoimmune joint disease) — small effect.",
+"note"
+],
+"GG": [
+"Slightly higher",
+"Two copies — a small increase.",
+"note"
+]
+}
+},
+{
+"rsid": "rs1061170",
+"gene": "CFH",
+"cat": "Health",
+"title": "Aging eyes (macular degeneration)",
+"gt": {
+"TT": [
+"Lower risk",
+"",
+"good"
+],
+"CT": [
+"Moderate",
+"One copy of a variant that raises the risk of age-related macular degeneration (vision loss late in life). Sunglasses and not smoking really help.",
+"watch"
+],
+"CC": [
+"Higher",
+"Two copies — higher risk.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs10490924",
+"gene": "ARMS2",
+"cat": "Health",
+"title": "Aging eyes — second gene",
+"gt": {
+"GG": [
+"Lower risk",
+"The safer version of a second macular-degeneration gene — good news paired with the eye gene above.",
+"good"
+],
+"GT": [
+"Moderate",
+"One risk copy.",
+"note"
+],
+"TT": [
+"Higher",
+"Two risk copies.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs34637584",
+"gene": "LRRK2",
+"cat": "Health",
+"title": "Parkinson's (LRRK2 G2019S)",
+"gt": {
+"GG": [
+"Not a carrier",
+"You don't carry the most common inheritable Parkinson's variant.",
+"good"
+],
+"AG": [
+"Carrier",
+"One copy raises Parkinson's risk.",
+"watch"
+],
+"AA": [
+"Two copies",
+"",
+"watch"
+]
+}
+},
+{
+"rsid": "rs28929474",
+"gene": "SERPINA1 Z",
+"cat": "Health",
+"title": "Lung/liver protector — Z variant",
+"gt": {
+"CC": [
+"Not a carrier",
+"You make normal amounts of a protein that shields your lungs and liver (no 'Z' variant).",
+"good"
+],
+"CT": [
+"Carrier (MZ)",
+"One 'Z' copy — slightly less of the protector protein.",
+"note"
+],
+"TT": [
+"ZZ",
+"Alpha-1 antitrypsin deficiency.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs17580",
+"gene": "SERPINA1 S",
+"cat": "Health",
+"title": "Lung/liver protector — S variant",
+"gt": {
+"AA": [
+"Not a carrier",
+"No 'S' variant.",
+"good"
+],
+"AT": [
+"Carrier (MS)",
+"You carry one milder 'S' copy of the lung/liver protector. Alone it's low-impact; it would only matter much if paired with a 'Z' copy — and you're clear on Z.",
+"note"
+],
+"TT": [
+"SS",
+"Reduced protector.",
+"note"
+]
+}
+},
+{
+"rsid": "rs16969968",
+"gene": "CHRNA5",
+"cat": "Health",
+"title": "Nicotine dependence",
+"gt": {
+"GG": [
+"Lower pull",
+"Your brain's nicotine wiring is the version with less pull toward heavy smoking — a genetic head start against addiction.",
+"good"
+],
+"AG": [
+"In between",
+"",
+"note"
+],
+"AA": [
+"Higher pull",
+"Tied to heavier smoking and higher lung-cancer risk if you smoke.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs1800629",
+"gene": "TNF",
+"cat": "Health",
+"title": "Inflammation dial (TNF)",
+"gt": {
+"GG": [
+"Standard",
+"Your inflammation 'volume knob' sits at the normal setting.",
+"good"
+],
+"AG": [
+"Slightly higher",
+"One copy tied to a bit more inflammatory signaling.",
+"note"
+],
+"AA": [
+"Higher",
+"Two copies — more inflammatory signaling.",
+"note"
+]
+}
+},
+{
+"rsid": "rs1800896",
+"gene": "IL10",
+"cat": "Health",
+"title": "Calming immune signal (IL-10)",
+"gt": {
+"GG": [
+"High producer",
+"Strong anti-inflammatory signal.",
+"good"
+],
+"AG": [
+"Medium",
+"You make a medium amount of a calming, anti-inflammatory immune signal.",
+"info"
+],
+"AA": [
+"Low producer",
+"Less of the calming signal.",
+"note"
+]
+}
+},
+{
+"rsid": "rs1042522",
+"gene": "TP53",
+"cat": "Health",
+"title": "'Guardian' gene (TP53 P72R)",
+"gt": {
+"CC": [
+"Pro/Pro",
+"A common version of the famous cancer-guardian gene. The two versions balance cell-repair vs. cell-cleanup slightly differently — everyday impact is tiny.",
+"info"
+],
+"CG": [
+"Pro/Arg",
+"Mixed version.",
+"info"
+],
+"GG": [
+"Arg/Arg",
+"The other common version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs5882",
+"gene": "CETP",
+"cat": "Health",
+"title": "Good-cholesterol & longevity",
+"gt": {
+"AA": [
+"Variant/variant",
+"A version of a cholesterol-shuffling gene that some studies tie to healthier HDL ('good' cholesterol) and even longer life — a small, much-debated effect.",
+"good"
+],
+"AG": [
+"Mixed",
+"One copy.",
+"info"
+],
+"GG": [
+"Standard",
+"Standard version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs2802292",
+"gene": "FOXO3",
+"cat": "Health",
+"title": "Longevity gene (FOXO3)",
+"gt": {
+"TT": [
+"Common",
+"No longevity copy here.",
+"info"
+],
+"GT": [
+"One longevity copy",
+"You carry one copy of a variant found more often in people who live to 100 — a small but real longevity nudge.",
+"good"
+],
+"GG": [
+"Two copies",
+"The strongest version of the longevity link.",
+"good"
+]
+}
+},
+{
+"rsid": "rs662",
+"gene": "PON1",
+"cat": "Health",
+"title": "Detox enzyme (PON1)",
+"gt": {
+"CC": [
+"Q/Q",
+"",
+"info"
+],
+"CT": [
+"Q/R",
+"A mix of two versions of an enzyme that helps break down certain pesticides and protects blood vessels.",
+"info"
+],
+"TT": [
+"R/R",
+"A version of a detox/heart-protective enzyme; activity varies a lot person to person.",
+"info"
+]
+}
+},
+{
+"rsid": "rs12979860",
+"gene": "IFNL4",
+"cat": "Health",
+"title": "Hepatitis-C treatment response",
+"gt": {
+"CC": [
+"Favorable",
+"Best response to older hepatitis-C treatments.",
+"good"
+],
+"CT": [
+"In between",
+"",
+"note"
+],
+"TT": [
+"Less favorable",
+"If you ever had hepatitis C, the older interferon treatment worked less well for this genotype (modern drugs made this mostly moot).",
+"note"
+]
+}
+},
+{
+"rsid": "rs1801253",
+"gene": "ADRB1",
+"cat": "Health",
+"title": "Heart receptor (ADRB1)",
+"gt": {
+"GG": [
+"Gly/Gly",
+"A version of a heart-rate receptor that beta-blocker heart medicines act on — versions can respond a little differently.",
+"info"
+],
+"CG": [
+"Arg/Gly",
+"Mixed.",
+"info"
+],
+"CC": [
+"Arg/Arg",
+"Other version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs602662",
+"gene": "FUT2",
+"cat": "Health",
+"title": "Vitamin B12 (measured level)",
+"gt": {
+"AA": [
+"Higher reading",
+"Your FUT2 type tends to show HIGHER vitamin B12 on a blood test — partly a quirk of how B12 is measured in non-secretors, so don't over-read a high number.",
+"info"
+],
+"AG": [
+"Average",
+"Average measured B12.",
+"info"
+],
+"GG": [
+"Lower reading",
+"Tends toward lower measured B12.",
+"info"
+]
+}
+},
+{
+"rsid": "rs10741657",
+"gene": "CYP2R1",
+"cat": "Health",
+"title": "Vitamin D tendency",
+"gt": {
+"AA": [
+"Higher",
+"Genetically tends toward higher vitamin D.",
+"good"
+],
+"AG": [
+"About average",
+"One copy each way — combined with your other vitamin-D gene this lands near average. Still worth a blood test if you're indoors a lot or live somewhere grey.",
+"info"
+],
+"GG": [
+"Lower",
+"Tends toward lower vitamin D — worth checking.",
+"info"
+]
+}
+},
+{
+"rsid": "rs3923809",
+"gene": "BTBD9",
+"cat": "Health",
+"title": "Restless legs syndrome",
+"gt": {
+"GG": [
+"Lower",
+"Lower-risk version.",
+"good"
+],
+"AG": [
+"Slightly higher",
+"One copy of the top restless-legs-syndrome variant — a modest bump in odds of that creepy-crawly urge to move your legs at night.",
+"info"
+],
+"AA": [
+"Higher",
+"Two copies — higher restless-legs odds.",
+"info"
+]
+}
+},
+{
+"rsid": "rs2651899",
+"gene": "PRDM16",
+"cat": "Health",
+"title": "Migraine predisposition",
+"gt": {
+"TT": [
+"Lower",
+"Lower-risk version.",
+"good"
+],
+"CT": [
+"Slightly higher",
+"One copy of a common migraine-linked variant — a small nudge in migraine odds (you carry a second one too).",
+"info"
+],
+"CC": [
+"Higher",
+"Two copies.",
+"info"
+]
+}
+},
+{
+"rsid": "rs174537",
+"gene": "FADS1",
+"cat": "Health",
+"title": "Omega-3 processing",
+"gt": {
+"GG": [
+"Efficient",
+"You convert plant oils into active omega-3 (EPA/DHA) efficiently.",
+"good"
+],
+"GT": [
+"Intermediate",
+"You convert plant-based omega-3 (from seeds/nuts) into the active form only so-so — eating actual fish (or algae oil) gives you more bang for the buck.",
+"info"
+],
+"TT": [
+"Less efficient",
+"Poor conversion — direct fish/algae omega-3 matters most for you.",
+"info"
+]
+}
+},
+{
+"rsid": "rs7501331",
+"gene": "BCMO1",
+"cat": "Health",
+"title": "Beta-carotene → vitamin A",
+"gt": {
+"CC": [
+"Good converter",
+"You convert beta-carotene (the orange in carrots/sweet potato) into active vitamin A well.",
+"good"
+],
+"CT": [
+"Reduced",
+"Somewhat reduced conversion — a bit more reliance on ready-made vitamin A (dairy, eggs).",
+"info"
+],
+"TT": [
+"Poor",
+"Poor converter — pre-formed vitamin A matters.",
+"info"
+]
+}
+},
+{
+"rsid": "rs7946",
+"gene": "PEMT",
+"cat": "Health",
+"title": "Choline need",
+"gt": {
+"CC": [
+"Lower need",
+"You make choline internally more easily.",
+"good"
+],
+"CT": [
+"Moderate",
+"",
+"info"
+],
+"TT": [
+"Higher need",
+"A version tied to making less choline yourself, so dietary choline (eggs, liver, soy) matters more for you — important for liver and brain.",
+"info"
+]
+}
+},
+{
+"rsid": "rs33972313",
+"gene": "SLC23A1",
+"cat": "Health",
+"title": "Vitamin C transport",
+"gt": {
+"CC": [
+"Normal",
+"Normal vitamin-C uptake into your cells.",
+"good"
+],
+"CT": [
+"Slightly lower",
+"One copy of a rare variant that lowers blood vitamin C.",
+"info"
+],
+"TT": [
+"Lower",
+"Lower circulating vitamin C.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1761667",
+"gene": "CD36",
+"cat": "Traits",
+"title": "Fat taste sensitivity",
+"gt": {
+"GG": [
+"Common version",
+"The common CD36 version — how strongly people taste dietary fat is genuinely genetic, though studies on this exact marker are mixed.",
+"info"
+],
+"AG": [
+"Mixed",
+"One of each version.",
+"info"
+],
+"AA": [
+"Lower CD36",
+"Lower fat-receptor levels — may notice fat in food less.",
+"info"
+]
+}
+},
+{
+"rsid": "rs5751876",
+"gene": "ADORA2A",
+"cat": "Traits",
+"title": "Caffeine jitters",
+"gt": {
+"CC": [
+"Calmer",
+"Less likely to feel anxious from caffeine.",
+"good"
+],
+"CT": [
+"Some jitters",
+"One copy tied to feeling more anxious/jittery after caffeine — a fun twist given you clear caffeine fast but may still feel wired.",
+"info"
+],
+"TT": [
+"Jittery",
+"Most prone to caffeine-induced anxiety.",
+"info"
+]
+}
+},
+{
+"rsid": "rs17646946",
+"gene": "TCHH",
+"cat": "Traits",
+"title": "Hair texture (weak marker)",
+"gt": {
+"AA": [
+"Straighter-leaning",
+"Two copies of the European straight-hair allele.",
+"info"
+],
+"AG": [
+"In between",
+"One straight-hair allele.",
+"info"
+],
+"GG": [
+"Wavy-leaning",
+"You lack the main straight-hair allele at this marker, so you lean slightly wavy rather than dead-straight. Big caveat: the strongest European texture gene (TCHH rs11803731) isn't on this chip, so this is a weak hint. Separately, EDAR says your hair is fine, European-type (not thick East-Asian straight).",
+"info"
+]
+}
+},
+{
+"rsid": "rs6591536",
+"gene": "OR5A1",
+"cat": "Traits",
+"title": "Violet / floral smell",
+"gt": {
+"AA": [
+"Super-smeller",
+"You carry two copies of a smell-receptor variant that makes you very sensitive to beta-ionone — the violet/floral aroma in raspberries, wine, tea and many perfumes. To you it smells intense and lovely; to others it barely registers.",
+"good"
+],
+"AG": [
+"Can smell it",
+"You can detect the violet/floral aroma, at medium strength.",
+"info"
+],
+"GG": [
+"Nearly blind to it",
+"This floral note smells weak or slightly sour/sharp to you — you're largely 'blind' to beta-ionone.",
+"info"
+]
+}
+},
+{
+"rsid": "rs4343",
+"gene": "ACE",
+"cat": "Athletic",
+"title": "ACE — power vs endurance",
+"gt": {
+"AA": [
+"Endurance (I/I)",
+"Two 'insertion' copies — the endurance-leaning ACE type found more in distance runners and rowers.",
+"info"
+],
+"AG": [
+"Balanced (I/D)",
+"You're a mix of both ACE types — a versatile engine that adapts to either power or endurance training.",
+"good"
+],
+"GG": [
+"Power (D/D)",
+"Two 'deletion' copies — the power/strength-leaning ACE type.",
+"info"
+]
+}
+},
+{
+"rsid": "rs8192678",
+"gene": "PPARGC1A",
+"cat": "Athletic",
+"title": "Aerobic engine (PGC-1α)",
+"gt": {
+"CC": [
+"Strong (Gly/Gly)",
+"You carry the favorable version of the master switch that builds mitochondria — good aerobic capacity and response to endurance training.",
+"good"
+],
+"CT": [
+"Intermediate",
+"One copy of the Ser variant that slightly blunts aerobic adaptation.",
+"info"
+],
+"TT": [
+"Reduced",
+"Two Ser copies — weaker aerobic adaptation on average.",
+"info"
+]
+}
+},
+{
+"rsid": "rs17602729",
+"gene": "AMPD1",
+"cat": "Athletic",
+"title": "Muscle energy enzyme",
+"gt": {
+"GG": [
+"Normal",
+"Your muscle AMP-deaminase works fully — no genetic exercise-intolerance from this gene, so you recover energy normally during hard effort.",
+"good"
+],
+"AG": [
+"Carrier",
+"One non-working copy — usually fine, occasionally a little more muscle fatigue.",
+"info"
+],
+"AA": [
+"Deficient",
+"Two non-working copies — can cause muscle fatigue/cramping with intense exercise.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs4253778",
+"gene": "PPARA",
+"cat": "Athletic",
+"title": "Fuel-use type (PPARα)",
+"gt": {
+"GG": [
+"Power-leaning",
+"Leans toward strength/power and heart-muscle growth.",
+"info"
+],
+"CG": [
+"Mixed",
+"A blend — your muscles switch between burning fat (endurance) and fast fuel (power) fairly flexibly.",
+"info"
+],
+"CC": [
+"Endurance-leaning",
+"Leans toward fat-burning endurance.",
+"info"
+]
+}
+},
+{
+"rsid": "rs12722",
+"gene": "COL5A1",
+"cat": "Athletic",
+"title": "Tendons & flexibility",
+"gt": {
+"TT": [
+"Stiffer / tougher",
+"Stiffer tendons — often better running economy and lower soft-tissue injury risk, but less flexible.",
+"info"
+],
+"CT": [
+"Intermediate",
+"A middle-ground tendon type — moderate flexibility and injury resilience.",
+"info"
+],
+"CC": [
+"More flexible",
+"More flexible tendons — greater range of motion, slightly higher soft-tissue injury risk.",
+"info"
+]
+}
+},
+{
+"rsid": "rs8111989",
+"gene": "CKM",
+"cat": "Athletic",
+"title": "Aerobic trainability (CKM)",
+"gt": {
+"TT": [
+"One type",
+"A version of the muscle creatine-kinase gene studied for how much your aerobic fitness improves with training.",
+"info"
+],
+"CT": [
+"Mixed",
+"Intermediate trainability signal.",
+"info"
+],
+"CC": [
+"Other type",
+"The other CKM version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs4961",
+"gene": "ADD1",
+"cat": "Nutrition",
+"title": "Salt sensitivity",
+"gt": {
+"GG": [
+"Not salt-sensitive",
+"Your blood pressure doesn't react much to salt at this gene.",
+"good"
+],
+"GT": [
+"Salt-sensitive",
+"You carry one 'salt-sensitive' copy — a hint that your blood pressure may respond more to sodium. (The ADD1–salt link is weak/non-significant in Europeans, so this is a mild suggestion, not a rule — but lower salt is good advice regardless.)",
+"watch"
+],
+"TT": [
+"Very salt-sensitive",
+"Two copies — blood pressure is quite salt-responsive; watch sodium.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs699",
+"gene": "AGT",
+"cat": "Nutrition",
+"title": "Blood-pressure gene (AGT)",
+"gt": {
+"AA": [
+"Lower",
+"Lower-activity version of the blood-pressure hormone precursor.",
+"good"
+],
+"AG": [
+"Intermediate",
+"",
+"info"
+],
+"GG": [
+"Higher",
+"The higher-activity version — combined with your salt-sensitivity variant, keeping sodium moderate and potassium (veg, fruit) up is worthwhile.",
+"watch"
+]
+}
+},
+{
+"rsid": "rs1800795",
+"gene": "IL6",
+"cat": "Nutrition",
+"title": "Inflammation & recovery",
+"gt": {
+"CC": [
+"Lower",
+"Lower baseline inflammatory signaling.",
+"good"
+],
+"CG": [
+"Intermediate",
+"",
+"info"
+],
+"GG": [
+"Higher",
+"A version tied to a stronger inflammatory (IL-6) response — an anti-inflammatory diet (oily fish, olive oil, colorful plants) and good sleep may help exercise recovery.",
+"info"
+]
+}
+},
+{
+"rsid": "rs4880",
+"gene": "SOD2",
+"cat": "Nutrition",
+"title": "Antioxidant defense (SOD2)",
+"gt": {
+"AA": [
+"Variant type",
+"A common version of a key mitochondrial antioxidant enzyme; some studies suggest this type benefits a little more from antioxidant-rich foods (berries, greens, nuts).",
+"info"
+],
+"AG": [
+"Mixed",
+"One of each version.",
+"info"
+],
+"GG": [
+"Other type",
+"The other SOD2 version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs328",
+"gene": "LPL",
+"cat": "Nutrition",
+"title": "Blood-fat clearance (LPL)",
+"gt": {
+"CC": [
+"Typical",
+"The common version — typical clearance of fats (triglycerides) from your blood after meals.",
+"info"
+],
+"CG": [
+"Protective",
+"You carry the protective 'stop' variant linked to lower triglycerides and higher good cholesterol.",
+"good"
+],
+"GG": [
+"Protective",
+"Two protective copies — favorable blood-fat profile.",
+"good"
+]
+}
+},
+{
+"rsid": "rs9536314",
+"gene": "KLOTHO",
+"cat": "Longevity",
+"title": "Klotho 'longevity' variant (KL-VS)",
+"gt": {
+"TT": [
+"Non-carrier",
+"You don't carry the KL-VS klotho variant. Heterozygous carriers get a small cognition and longevity edge, but being a non-carrier is the common, neutral result.",
+"info"
+],
+"GT": [
+"Carrier — small edge",
+"You carry one copy of KL-VS, linked in studies to better late-life cognition and a modest longevity advantage.",
+"good"
+],
+"GG": [
+"Two copies",
+"Two copies — unlike one copy, this is not associated with the benefit.",
+"info"
+]
+}
+},
+{
+"rsid": "rs2736100",
+"gene": "TERT",
+"cat": "Longevity",
+"title": "Telomere maintenance (TERT)",
+"gt": {
+"CC": [
+"One type",
+"A version of the telomerase gene weakly linked to telomere length — a cell-aging marker. The effect is tiny and easily outweighed by smoking, stress, sleep and exercise.",
+"info"
+],
+"AC": [
+"Mixed",
+"Intermediate telomerase version.",
+"info"
+],
+"AA": [
+"Other type",
+"The other TERT version, weakly linked to longer telomeres.",
+"info"
+]
+}
+},
+{
+"rsid": "rs3803304",
+"gene": "AKT1",
+"cat": "Longevity",
+"title": "Growth-signaling & aging (AKT1)",
+"gt": {
+"CC": [
+"One type",
+"A version of a gene in the insulin/growth-signaling pathway that some longevity studies have flagged — effects are small and inconsistent.",
+"info"
+],
+"CG": [
+"Mixed",
+"One of each version of this aging-pathway gene.",
+"info"
+],
+"GG": [
+"Other type",
+"The other AKT1 version.",
+"info"
+]
+}
+},
+{
+"rsid": "rs12821256",
+"gene": "KITLG",
+"cat": "Traits",
+"title": "Blonde-hair variant",
+"gt": {
+"TT": [
+"Not the blonde variant",
+"You don't carry the main European blonde-hair enhancer allele — consistent with darker hair.",
+"info"
+],
+"CT": [
+"One blonde allele",
+"One copy of the KITLG variant that raises blonde-hair probability.",
+"info"
+],
+"CC": [
+"Two blonde alleles",
+"Two copies — strongly associated with blonde hair in Europeans.",
+"info"
+]
+}
+},
+{
+"rsid": "rs12896399",
+"gene": "SLC24A4",
+"cat": "Traits",
+"title": "Hair shade (SLC24A4)",
+"gt": {
+"GG": [
+"Darker-leaning",
+"At this well-replicated hair-color gene you carry the darker-shade version.",
+"info"
+],
+"GT": [
+"Intermediate",
+"A mix — the T allele lightens hair, G darkens it.",
+"info"
+],
+"TT": [
+"Lighter-leaning",
+"Two copies of the lighter-shade allele.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1805005",
+"gene": "MC1R",
+"cat": "Traits",
+"title": "MC1R fair-skin variant (V60L)",
+"gt": {
+"GG": [
+"Not a carrier",
+"No V60L variant.",
+"info"
+],
+"GT": [
+"One 'r' allele",
+"You carry one copy of this milder MC1R variant — a weak nudge toward fairer skin, mild freckling and a bit more sun sensitivity. Not red-hair-causing on its own.",
+"info"
+],
+"TT": [
+"Two copies",
+"Two copies of the V60L variant — stronger fair-skin/freckling signal.",
+"info"
+]
+}
+},
+{
+"rsid": "rs1799990",
+"gene": "PRNP",
+"cat": "Health",
+"title": "Prion codon 129 (M/V)",
+"gt": {
+"GG": [
+"Val/Val",
+"You're homozygous Val at PRNP codon 129 — the common, non-protective state. Heterozygous (Met/Val) people are notably more resistant to prion diseases; you're not, though these diseases are extraordinarily rare so this is about relative susceptibility only.",
+"note"
+],
+"AG": [
+"Met/Val",
+"Heterozygous — the protective genotype, linked to resistance against prion diseases (e.g. CJD, kuru).",
+"good"
+],
+"AA": [
+"Met/Met",
+"Homozygous Met — the other common, non-heterozygous state.",
+"note"
+]
+}
+},
+{
+"rsid": "rs1042725",
+"gene": "HMGA2",
+"cat": "Traits",
+"title": "Height marker (very weak)",
+"gt": {
+"CC": [
+"Taller allele",
+"At this height gene the C allele is the 'taller' one, and you'd carry two — worth a few millimetres.",
+"info"
+],
+"CT": [
+"Average",
+"One of each at this marker.",
+"info"
+],
+"TT": [
+"Shorter allele (this marker only)",
+"The C allele is the 'taller' one here; you have TT, the slightly shorter-leaning version at this single spot. Height is set by hundreds to thousands of genes, so one marker says almost nothing — treat this as trivia, not a prediction.",
+"info"
+]
+}
+},
+{
+"rsid": "rs7559271",
+"gene": "PAX3",
+"cat": "Facial",
+"title": "Nasal-root depth (PAX3)",
+"gt": {
+"GG": [
+"Deeper-set root (trend only)",
+"The G allele is linked to a slightly larger nasion distance — a higher-set / deeper nasal root. You carry two, so you lean that way on average. This is a population trend explaining well under 1% of nose shape, not a reading of your actual nose.",
+"info"
+],
+"AG": [
+"Intermediate",
+"One copy of the deeper-root allele — mid-range.",
+"info"
+],
+"AA": [
+"Shallower-leaning (trend only)",
+"No copies of the deeper-root allele — leans marginally shallower. A tiny population trend, not a measurement.",
+"info"
+]
+}
+},
+{
+"rsid": "rs2424399",
+"gene": "PAX1",
+"cat": "Facial",
+"title": "Nasal width (PAX1)",
+"gt": {
+"AA": [
+"Narrower-leaning (trend only)",
+"The C allele is linked to slightly wider nasal width; you have none, so you lean marginally narrower. A <1% population-average trend, not a personal reading.",
+"info"
+],
+"AC": [
+"Intermediate",
+"One 'wider' copy — mid-range.",
+"info"
+],
+"CC": [
+"Wider-leaning (trend only)",
+"Two copies of the 'wider nasal width' allele — a faint population trend.",
+"info"
+]
+}
+},
+{
+"rsid": "rs4648379",
+"gene": "PRDM16",
+"cat": "Facial",
+"title": "Nose ala–tip distance (PRDM16)",
+"gt": {
+"CC": [
+"Longer alar region (trend only)",
+"The T allele is linked to a shorter distance between the nostril wing and the nose tip; you have none, leaning toward a longer alar region. A specific landmark distance, and a <1% trend — not 'your nose is X'.",
+"info"
+],
+"CT": [
+"Intermediate",
+"One copy of the 'shorter' allele — mid-range.",
+"info"
+],
+"TT": [
+"Shorter-leaning (trend only)",
+"Two copies — leans toward a shorter ala-to-tip distance. Tiny population trend.",
+"info"
+]
+}
+},
+{
+"rsid": "rs805722",
+"gene": "COL17A1",
+"cat": "Facial",
+"title": "Eye-to-nose-root distance (COL17A1)",
+"gt": {
+"CC": [
+"Smaller-leaning (trend only)",
+"No copies of the allele linked to a larger eye-to-nasion distance — leans marginally smaller. A <1% trend.",
+"info"
+],
+"CT": [
+"Intermediate (trend only)",
+"One copy of the 'larger eye–nasion distance' allele — you're mid-range. A population trend, not a personal reading.",
+"info"
+],
+"TT": [
+"Larger-leaning (trend only)",
+"Two copies — leans toward a larger eye-to-nose-root distance. Faint trend.",
+"info"
+]
+}
+},
+{
+"rsid": "rs17447439",
+"gene": "TP63",
+"cat": "Facial",
+"title": "Eye spacing (TP63)",
+"gt": {
+"AA": [
+"Wider-set-leaning (trend only)",
+"The G allele is linked to more closely-set eyes; you have none, leaning toward slightly wider-set eyes. A population-average trend under 1% of variance — not a measurement of your face.",
+"info"
+],
+"AG": [
+"Intermediate",
+"One 'closer-set' copy — mid-range.",
+"info"
+],
+"GG": [
+"Closer-set-leaning (trend only)",
+"Two copies of the 'closer-set eyes' allele — a faint trend.",
+"info"
+]
+}
+}
+]

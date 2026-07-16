@@ -1,0 +1,415 @@
+{
+ "Type 2 diabetes": [
+  {
+   "rsid": "rs7903146",
+   "risk_allele": "T",
+   "beta": 0.329,
+   "locus_group": "TCF7L2",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs10811661",
+   "risk_allele": "T",
+   "beta": 0.174,
+   "locus_group": "CDKN2A/B",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs13266634",
+   "risk_allele": "C",
+   "beta": 0.113,
+   "locus_group": "SLC30A8",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs7754840",
+   "risk_allele": "C",
+   "beta": 0.113,
+   "locus_group": "CDKAL1",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs1111875",
+   "risk_allele": "C",
+   "beta": 0.122,
+   "locus_group": "HHEX",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs5219",
+   "risk_allele": "T",
+   "beta": 0.131,
+   "locus_group": "KCNJ11",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs1801282",
+   "risk_allele": "C",
+   "beta": 0.131,
+   "locus_group": "PPARG",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs2237892",
+   "risk_allele": "C",
+   "beta": 0.1,
+   "locus_group": "KCNQ1",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs4402960",
+   "risk_allele": "T",
+   "beta": 0.131,
+   "locus_group": "IGF2BP2",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs8050136",
+   "risk_allele": "A",
+   "beta": 0.14,
+   "locus_group": "FTO",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  },
+  {
+   "rsid": "rs2943641",
+   "risk_allele": "C",
+   "beta": 0.174,
+   "locus_group": "IRS1",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001360"
+  }
+ ],
+ "Coronary artery disease": [
+  {
+   "rsid": "rs1333049",
+   "risk_allele": "C",
+   "beta": 0.255,
+   "locus_group": "9p21",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs599839",
+   "risk_allele": "A",
+   "beta": 0.104,
+   "locus_group": "SORT1",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs17465637",
+   "risk_allele": "C",
+   "beta": 0.131,
+   "locus_group": "MIA3",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs6725887",
+   "risk_allele": "C",
+   "beta": 0.131,
+   "locus_group": "WDR12",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs9349379",
+   "risk_allele": "G",
+   "beta": 0.095,
+   "locus_group": "PHACTR1",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs1746048",
+   "risk_allele": "C",
+   "beta": 0.086,
+   "locus_group": "CXCL12",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs2306374",
+   "risk_allele": "C",
+   "beta": 0.14,
+   "locus_group": "MRAS",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs11206510",
+   "risk_allele": "T",
+   "beta": 0.077,
+   "locus_group": "PCSK9",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs12190287",
+   "risk_allele": "C",
+   "beta": 0.077,
+   "locus_group": "TCF21",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs3798220",
+   "risk_allele": "C",
+   "beta": 0.351,
+   "locus_group": "LPA_a",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs10455872",
+   "risk_allele": "G",
+   "beta": 0.385,
+   "locus_group": "LPA_b",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  },
+  {
+   "rsid": "rs4420638",
+   "risk_allele": "G",
+   "beta": 0.18,
+   "locus_group": "APOE",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000378"
+  }
+ ],
+ "Prostate cancer": [
+  {
+   "rsid": "rs6983267",
+   "risk_allele": "G",
+   "beta": 0.211,
+   "locus_group": "8q24",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001663"
+  },
+  {
+   "rsid": "rs10993994",
+   "risk_allele": "T",
+   "beta": 0.191,
+   "locus_group": "MSMB",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001663"
+  },
+  {
+   "rsid": "rs4430796",
+   "risk_allele": "A",
+   "beta": 0.199,
+   "locus_group": "HNF1B",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001663"
+  },
+  {
+   "rsid": "rs2735839",
+   "risk_allele": "G",
+   "beta": 0.174,
+   "locus_group": "KLK3",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001663"
+  },
+  {
+   "rsid": "rs10896449",
+   "risk_allele": "G",
+   "beta": 0.178,
+   "locus_group": "11q13",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001663"
+  },
+  {
+   "rsid": "rs1859962",
+   "risk_allele": "G",
+   "beta": 0.157,
+   "locus_group": "17q24",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001663"
+  },
+  {
+   "rsid": "rs721048",
+   "risk_allele": "A",
+   "beta": 0.118,
+   "locus_group": "2p15",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0001663"
+  }
+ ],
+ "Colorectal cancer": [
+  {
+   "rsid": "rs6983267",
+   "risk_allele": "G",
+   "beta": 0.153,
+   "locus_group": "8q24",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs4939827",
+   "risk_allele": "T",
+   "beta": 0.122,
+   "locus_group": "SMAD7",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs10795668",
+   "risk_allele": "G",
+   "beta": 0.135,
+   "locus_group": "10p14",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs3802842",
+   "risk_allele": "C",
+   "beta": 0.095,
+   "locus_group": "11q23",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs4444235",
+   "risk_allele": "C",
+   "beta": 0.094,
+   "locus_group": "BMP4",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs9929218",
+   "risk_allele": "G",
+   "beta": 0.079,
+   "locus_group": "16q22",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs4779584",
+   "risk_allele": "T",
+   "beta": 0.113,
+   "locus_group": "15q13",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs16892766",
+   "risk_allele": "C",
+   "beta": 0.198,
+   "locus_group": "8q23",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs961253",
+   "risk_allele": "A",
+   "beta": 0.095,
+   "locus_group": "20p12",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs10936599",
+   "risk_allele": "C",
+   "beta": 0.058,
+   "locus_group": "MYNN",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  },
+  {
+   "rsid": "rs10411210",
+   "risk_allele": "C",
+   "beta": 0.104,
+   "locus_group": "RHPN2",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0005842"
+  }
+ ],
+ "Melanoma": [
+  {
+   "rsid": "rs401681",
+   "risk_allele": "A",
+   "beta": 0.182,
+   "locus_group": "TERT",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000756"
+  },
+  {
+   "rsid": "rs16891982",
+   "risk_allele": "G",
+   "beta": 0.727,
+   "locus_group": "SLC45A2",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000756"
+  },
+  {
+   "rsid": "rs7023329",
+   "risk_allele": "A",
+   "beta": 0.166,
+   "locus_group": "9p21",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000756"
+  },
+  {
+   "rsid": "rs1393350",
+   "risk_allele": "A",
+   "beta": 0.255,
+   "locus_group": "TYR",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000756"
+  },
+  {
+   "rsid": "rs258322",
+   "risk_allele": "A",
+   "beta": 0.513,
+   "locus_group": "16q24",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000756"
+  },
+  {
+   "rsid": "rs910873",
+   "risk_allele": "T",
+   "beta": 0.56,
+   "locus_group": "20q11",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000756"
+  },
+  {
+   "rsid": "rs1805007",
+   "risk_allele": "T",
+   "beta": 0.447,
+   "locus_group": "MC1R",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000756"
+  }
+ ],
+ "Atrial fibrillation": [
+  {
+   "rsid": "rs2200733",
+   "risk_allele": "T",
+   "beta": 0.542,
+   "locus_group": "4q25",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000275"
+  },
+  {
+   "rsid": "rs2106261",
+   "risk_allele": "T",
+   "beta": 0.223,
+   "locus_group": "ZFHX3",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000275"
+  },
+  {
+   "rsid": "rs13376333",
+   "risk_allele": "T",
+   "beta": 0.419,
+   "locus_group": "KCNN3",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000275"
+  },
+  {
+   "rsid": "rs3807989",
+   "risk_allele": "G",
+   "beta": 0.104,
+   "locus_group": "CAV1",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000275"
+  },
+  {
+   "rsid": "rs3903239",
+   "risk_allele": "G",
+   "beta": 0.243,
+   "locus_group": "PRRX1",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0000275"
+  }
+ ],
+ "Gout": [
+  {
+   "rsid": "rs2231142",
+   "risk_allele": "T",
+   "beta": 0.632,
+   "locus_group": "ABCG2",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0004274"
+  },
+  {
+   "rsid": "rs734553",
+   "risk_allele": "T",
+   "beta": 0.329,
+   "locus_group": "SLC2A9",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0004274"
+  },
+  {
+   "rsid": "rs11722228",
+   "risk_allele": "T",
+   "beta": 0.425,
+   "locus_group": "SLC17A1",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0004274"
+  },
+  {
+   "rsid": "rs2078267",
+   "risk_allele": "C",
+   "beta": 0.231,
+   "locus_group": "SLC22A11",
+   "source_url": "https://www.ebi.ac.uk/gwas/efotraits/EFO_0004274"
+  }
+ ]
+}

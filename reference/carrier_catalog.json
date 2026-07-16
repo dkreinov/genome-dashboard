@@ -1,0 +1,22 @@
+[
+ {"disease":"Hereditary breast & ovarian cancer (BRCA1 185delAG)","gene":"BRCA1","variant":"185delAG","rsid":"rs80357914","type":"cancer risk (dominant)","source":"https://medlineplus.gov/genetics/gene/brca1/",
+  "gt":{"II":["Not detected","reassuring","Normal (reference) at this founder spot."],
+        "DD":["Not detected","reassuring","Normal (reference) at this founder spot."],
+        "DI":["Possible variant — confirm","watch","An allele differs here — NOT reliable on a consumer chip; confirm with an accredited lab urgently."]}},
+ {"disease":"Hereditary breast & ovarian cancer (BRCA1 5382insC)","gene":"BRCA1","variant":"5382insC","rsid":"rs80357906","type":"cancer risk (dominant)","source":"https://medlineplus.gov/genetics/gene/brca1/",
+  "gt":{"II":["Not detected","reassuring","Normal (reference) at this founder spot."],
+        "DD":["Not detected","reassuring","Normal (reference) at this founder spot."],
+        "DI":["Possible variant — confirm","watch","An allele differs here — confirm with an accredited lab urgently."]}},
+ {"disease":"Hereditary breast & ovarian cancer (BRCA2 6174delT)","gene":"BRCA2","variant":"6174delT","rsid":"rs80359550","type":"cancer risk (dominant)","source":"https://medlineplus.gov/genetics/gene/brca2/",
+  "gt":{"II":["Not detected","reassuring","Normal (reference) at this founder spot."],
+        "DD":["Not detected","reassuring","Normal (reference) at this founder spot."],
+        "DI":["Possible variant — confirm","watch","An allele differs here — confirm with an accredited lab urgently."]}},
+ {"disease":"Canavan disease (E285A)","gene":"ASPA","variant":"E285A","rsid":"rs28940279","type":"recessive carrier","source":"https://medlineplus.gov/genetics/condition/canavan-disease/",
+  "gt":{"AA":["Not a carrier","reassuring","Reference at this founder variant."],
+        "AC":["Carrier","note","One copy — a healthy carrier; matters for family planning if a partner also carries."],
+        "CC":["Two copies","watch","Two copies — confirm clinically."]}},
+ {"disease":"Canavan disease (A305E)","gene":"ASPA","variant":"A305E","rsid":"rs28940574","type":"recessive carrier","source":"https://medlineplus.gov/genetics/condition/canavan-disease/",
+  "gt":{"CC":["Not a carrier","reassuring","Reference at this founder variant."],
+        "AC":["Carrier","note","One copy — a healthy carrier; matters for family planning."],
+        "AA":["Two copies","watch","Two copies — confirm clinically."]}}
+]
