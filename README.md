@@ -59,6 +59,8 @@ python run.py --input your_raw_dna.txt --out dashboard.html
 ```
 Open `dashboard.html` in any browser. **Fully offline. Your DNA never leaves the machine.**
 
+The report opens with a **sticky jump-nav** (click a section to scroll to it, active section highlights as you scroll), **collapsible trait cards** (one-line summary — icon, result, genotype — click any card to expand the explanation; *Expand / Collapse all* per section), and a **compact / detailed** density toggle (▦) in the header. Filters, language switch, theme, and *Save as PDF* work in every mode. Turn features off with `--no-nav`, `--no-collapse`, `--no-compact`.
+
 - `--input`  23andMe (v3/v4/v5) or AncestryDNA raw file (format auto-detected)
 - `--out`    output path (default dashboard.html)
 - `--lang ru,es`  add languages (needs `LLM_API_KEY`; a live switch appears in the report)

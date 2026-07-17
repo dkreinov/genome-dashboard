@@ -19,7 +19,12 @@ def main():
     ap.add_argument("--images", action="store_true", help="generate hero art (needs image key)")
     ap.add_argument("--portrait", type=int, default=0, metavar="N", help="generate N speculative DNA portrait variants (needs image key)")
     ap.add_argument("--env", default=None, help="path to a .env with optional API keys")
+    # UX (all on by default): sticky jump-nav, collapsible cards, compact/detailed toggle
+    ap.add_argument("--no-nav", action="store_true", help="disable the sticky jump-navigation bar")
+    ap.add_argument("--no-collapse", action="store_true", help="keep trait cards fully expanded (no click-to-open)")
+    ap.add_argument("--no-compact", action="store_true", help="hide the compact/detailed density toggle")
     a = ap.parse_args()
+    opts = {"nav": not a.no_nav, "disclosure": not a.no_collapse, "compact": not a.no_compact}
     cfg = config.Config(env_file=a.env)
     disc = safety.load()
 
@@ -43,7 +48,7 @@ def main():
         print("[2/4] images off")
 
     print("[3/4] rendering HTML …")
-    htmls = render_html.render(analysis, a.out, disc, images=images)
+    htmls = render_html.render(analysis, a.out, disc, images=images, opts=opts)
 
     langs = [l.strip() for l in a.lang.split(",") if l.strip()]
     if langs:
