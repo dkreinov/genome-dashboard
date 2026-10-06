@@ -13,7 +13,7 @@ import run_analysis, render_html, safety, config
 
 def main():
     ap = argparse.ArgumentParser(description="Generate an offline genome dashboard from a raw DNA file.")
-    ap.add_argument("--input", required=True, help="raw DNA file (23andMe or AncestryDNA)")
+    ap.add_argument("--input", required=True, help="raw DNA file (23andMe, AncestryDNA, or VCF/gVCF .vcf[.gz], GRCh37/38)")
     ap.add_argument("--out", default="dashboard.html")
     ap.add_argument("--lang", default="", help="comma-separated extra languages (needs LLM key)")
     ap.add_argument("--images", action="store_true", help="generate hero art (needs image key)")

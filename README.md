@@ -29,6 +29,9 @@ traits, health, pharmacogenomics, athletic, nutrition, longevity, facial tendenc
 (Y & mtDNA haplogroups + continental composition + runs of homozygosity), a Neanderthal estimate,
 polygenic risk scores, a carrier screen, and an optional DNA-based portrait.
 
+**Input:** a 23andMe or AncestryDNA raw file, or a whole-genome sequencing **VCF / gVCF** file
+(GRCh37 or GRCh38). See [Using a whole-genome VCF](#using-a-whole-genome-vcf).
+
 ![Example dashboard](docs/screenshot.png)
 
 *Above: the bundled `examples/example_dashboard.html`, rendered from 100% synthetic data (not a real person).*
@@ -61,7 +64,8 @@ Open `dashboard.html` in any browser. **Fully offline. Your DNA never leaves the
 
 The report opens with a **sticky jump-nav** (click a section to scroll to it, active section highlights as you scroll), **collapsible trait cards** (one-line summary — icon, result, genotype — click any card to expand the explanation; *Expand / Collapse all* per section), and a **compact / detailed** density toggle (▦) in the header. Filters, language switch, theme, and *Save as PDF* work in every mode. Turn features off with `--no-nav`, `--no-collapse`, `--no-compact`.
 
-- `--input`  23andMe (v3/v4/v5) or AncestryDNA raw file (format auto-detected)
+- `--input`  23andMe (v3/v4/v5) or AncestryDNA raw file, or a whole-genome / exome **VCF or gVCF**
+  (`.vcf` / `.vcf.gz`, GRCh37 or GRCh38) — format and build auto-detected
 - `--out`    output path (default dashboard.html)
 - `--lang ru,es`  add languages (needs `LLM_API_KEY`; a live switch appears in the report)
 - `--images`      decorative hero art (needs `IMAGE_API_KEY`; generic prompts only, never your DNA)
@@ -90,6 +94,27 @@ A genotyping chip reads a fixed subset of positions. Two ways to expand it:
 - **Whole-genome sequencing (~$200–600).** Reads all ~3 billion bases: rare variants arrays skip,
   plus things arrays can't resolve — e.g. **CYP2D6 copy number** and **full BRCA / carrier-gene
   sequencing** (not just founder SNPs).
+
+### Using a whole-genome VCF
+Give the VCF file from your sequencing provider (Dante Labs, tellmeGen, Nebula, …) to `--input`.
+- The engines use approximately 475 rsIDs. A WGS VCF file frequently has no rsIDs.
+  `reference/vcf_panel.json` gives the GRCh37 and GRCh38 position of each rsID.
+- If you add new markers, rebuild the panel with `python scripts/build_vcf_panel.py`.
+  This script is online (Ensembl REST).
+- A plain VCF file lists only the positions that are different from the reference.
+  The reader records a panel position that is not in the file as **homozygous reference**.
+  At 30x coverage, this is correct for almost all positions.
+- A **gVCF** file is better. Its reference blocks confirm the reference positions.
+  The reader records a position that has no coverage as "unknown".
+- The reader reads SNVs and the indel probes (ABO, BRCA founder deletions).
+  It reads only the first sample.
+- A VCF file gives more data than a chip. The reader supplies all Y and mtDNA positions
+  that the haplogroup callers use. The ROH scan uses a genome-wide SNV sample.
+- If you have only a BAM or CRAM file, call the variants first
+  (for example `bcftools mpileup | bcftools call`).
+  Alternatively, convert the file to the 23andMe format with WGS Extract.
+- To test the reader, run `python tests/test_vcf_reader.py`.
+  The test writes the synthetic mock file as a VCF file and reads it again.
 
 Neither meaningfully improves *facial* prediction — facial structure is hugely polygenic and
 environmental, so even a full genome yields only coarse population tendencies, not a face.
