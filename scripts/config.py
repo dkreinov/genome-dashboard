@@ -8,6 +8,7 @@ Keys are read from (first wins): explicit args -> process env -> a .env file
 (path via GENOME_DASHBOARD_ENV or ./.env). Generic, provider-agnostic names:
   LLM_API_KEY   / LLM_ENDPOINT   / LLM_MODEL     -> translation
   IMAGE_API_KEY / IMAGE_ENDPOINT / IMAGE_MODEL   -> hero images
+  IMAGE_PROVIDER = openai | dashscope (default dashscope)
 """
 import os, re
 
@@ -32,7 +33,8 @@ class Config:
         self.llm_model    = get("LLM_MODEL")
         self.img_key      = get("IMAGE_API_KEY")
         self.img_endpoint = get("IMAGE_ENDPOINT")
-        self.img_model    = get("IMAGE_MODEL", "wan2.2-t2i-flash")
+        self.img_provider = (get("IMAGE_PROVIDER") or "dashscope").lower()
+        self.img_model    = get("IMAGE_MODEL", "gpt-image-1" if self.img_provider == "openai" else "wan2.2-t2i-flash")
 
     def has_translation(self): return bool(self.llm_key)
     def has_images(self):      return bool(self.img_key)

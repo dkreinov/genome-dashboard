@@ -28,10 +28,20 @@ for trait, ents in load("prs_weights.json").items():
         ra = r["risk_allele"]; other = random.choice([b for b in bases if b != ra])
         put(r["rsid"], "1", "".join(sorted(random.choice([ra+ra, ra+other, other+other]))))
 
-# 3) pgx + carrier catalogs — pick a real gt key
-for f in ("pgx_catalog.json", "carrier_catalog.json"):
-    for e in load(f):
+# 3) pgx + carrier catalogs
+for e in load("pgx_catalog.json"):
+    if "gt" in e:                                   # single-SNP entry
         put(e["rsid"], "1", random.choice(list(e["gt"].keys())))
+    for a in e.get("alleles", []):                  # gene-level entry (Task 5)
+        put(a["probes"][0], "1", random.choice([a["ref"]*2, a["ref"]*2, a["ref"]+a["alt"]]))
+for e in load("carrier_catalog.json"):
+    if e.get("untestable"):
+        continue
+    gts = [e["ref"]*2]*6 + ["".join(sorted(e["ref"]+e["alt"]))]   # mostly normal, sometimes a carrier
+    gt = random.choice(gts)
+    put(e["probes"][0], "1", gt)
+    if e["rsid"] != e["probes"][0]:                  # also under the rsID so the VCF round trip covers it
+        put(e["rsid"], "1", gt)
 
 # 4) Neanderthal panel — random of its two alleles
 for rs, d in load("neanderthal_panel.json").items():

@@ -38,10 +38,13 @@ CATEGORIES=[("Health","heart"),("Pharmacogenomics","pill"),("Athletic","muscle")
             ("Nutrition","leaf"),("Longevity","clock"),("Facial","eye"),("Traits","sparkle")]
 SEV_ORDER=[c for c,_ in CATEGORIES]
 CATICON=dict(CATEGORIES)
-PGXC={"avoid":"#d0454b","caution":"#d98016","adjust":"#7c4dff","standard":"#5b6bd6","reassuring":"#1f9d5c"}
+PGXC={"avoid":"#d0454b","caution":"#d98016","adjust":"#7c4dff","standard":"#5b6bd6","reassuring":"#1f9d5c","untestable":"#6b7280"}
 POPCOL={"European":"#1f9d5c","East Asian":"#d98016","African":"#7c4dff","South Asian":"#5b6bd6","Amerindian/Admixed":"#6b7280"}
 
 esc=lambda s: html.escape(str(s), quote=True)
+
+def _banner(images, key):
+    return f'<figure class="secbanner"><img src="{images[key]}" alt=""></figure>' if images.get(key) else ""
 def T(s):  # translatable inline text
     return f'<span data-en="{esc(s)}">{esc(s)}</span>'
 def icon(cat,title,gene):
@@ -137,12 +140,20 @@ def render(analysis, out_path, disclaimers, images=None, opts=None):
         cc=""
         for v in A["carrier"]["variants"]:
             col=PGXC.get(v["category"],"#5b6bd6")
+            meta=[esc(v["gene"]), esc(v["variant"]), esc(v["gt"])]
+            if v.get("tier"): meta.append(f'tier {esc(v["tier"])}')
+            det=""
+            if v.get("aj_carrier_pct") is not None:
+                det=f'<div class="pgxgene">{T("Ashkenazi carriers")}: {v["aj_carrier_pct"]:g}%'
+                det+=(f' · {T("residual risk after a negative result")}: {esc(v["residual"])}' if v.get("residual") else '')
+                det+=(f' · {T("detection in Ashkenazi Jews")}: {esc(v["detection"])}' if v.get("detection") else '')+'</div>'
             cc+=(f'<div class="pgxcard" style="border-inline-start-color:{col}"><div class="pgxtop">'
                  f'<span class="pgxdrug">{esc(v["disease"])}</span><span class="pgxpill" style="background:{col}">{T(v["result"])}</span></div>'
-                 f'<div class="pgxgene">{esc(v["gene"])} · {esc(v["variant"])} · {esc(v["gt"])}</div>'
+                 f'<div class="pgxgene">{" · ".join(meta)}</div>{det}'
                  f'<div class="text">{T(v["text"])}</div>'
-                 f'<a class="pgxsrc" href="{esc(v["source"])}" target="_blank" rel="noopener">MedlinePlus ↗</a></div>')
-        carrier_html=(f'<h2 class="sec" id="sec-carrier">🧬 {T("Carrier screen (founder variants)")}</h2>'
+                 f'<a class="pgxsrc" href="{esc(v["source"])}" target="_blank" rel="noopener">{T("Source")} ↗</a></div>')
+        carrier_html=(f'<h2 class="sec" id="sec-carrier">🧬 {T("Carrier screen (Ashkenazi and other founder variants)")}</h2>'
+                      f'{_banner(images,"sec-carrier")}'
                       f'<div class="pgxgrid">{cc}</div>'
                       f'<div class="warnbox"><div class="warnh">⚠ {T("Important — what this does NOT tell you")}</div>'
                       f'<div class="warntext">{T(disclaimers["carrier"])}</div></div>')
@@ -158,16 +169,19 @@ def render(analysis, out_path, disclaimers, images=None, opts=None):
                  f'<div class="text">{T(d["text"])}</div>'
                  f'<a class="pgxsrc" href="{esc(d["source"])}" target="_blank" rel="noopener">CPIC ↗</a></div>')
         pgx_html=(f'<h2 class="sec" id="sec-meds">💊 {T("Medications (pharmacogenomics)")}</h2>'
+                  f'{_banner(images,"sec-meds")}'
                   f'<p class="blurb">{T(disclaimers["pgx"])}</p><div class="pgxgrid">{pc}</div>')
     # ---- catalog sections + filter ----
     disc = bool(opts.get("disclosure"))
     sections=""
     cat_present=[]
+    health_banner=_banner(images,"sec-health")   # shown once, under the first catalog heading
     for c in SEV_ORDER:
         items=[m for m in A["catalog"]["markers"] if m["cat"]==c]
         if not items: continue
         cat_present.append(c)
-        sections+=(f'<section class="catsec" id="{_slug(c)}"><h2 class="sec">{T(c)}<span class="cnt">{len(items)}</span></h2>'
+        hb, health_banner = health_banner, ""
+        sections+=(f'<section class="catsec" id="{_slug(c)}"><h2 class="sec">{T(c)}<span class="cnt">{len(items)}</span></h2>{hb}'
                    f'<div class="grid">'+"".join(_card(m, disc) for m in items)+"</div></section>")
     if disc:
         sections=('<div class="discctl"><button class="fbtn" onclick="allCards(true)">'+T("Expand all")
@@ -191,7 +205,7 @@ def render(analysis, out_path, disclaimers, images=None, opts=None):
                  for s,col,lbl in [("good","#1f9d5c","Reassuring"),("watch","#d98016","Attention"),("note","#6b7280","Carrier/minor"),("info","#5b6bd6","Neutral")])
         +'</div>')
     hero=f'<div class="hero"><img src="{images["hero"]}" alt=""></div>' if images.get("hero") else ""
-    return _PAGE.format(stats=stat_html, anc=anc_html, appearance=appearance, prs=prs_html, carrier=carrier_html,
+    return _PAGE.format(ancbanner=_banner(images,"sec-ancestry"), stats=stat_html, anc=anc_html, appearance=appearance, prs=prs_html, carrier=carrier_html,
                         pgx=pgx_html, filterbar=filterbar, sections=sections, hero=hero, jumpnav=jumpnav,
                         compact_btn=compact_btn, disc=T(disclaimers["global"]), lang_switch=_LANG_SWITCH)
 
@@ -212,6 +226,7 @@ h1{{font-size:24px;margin:0;letter-spacing:-.02em}}.controls{{display:flex;gap:8
 .theme{{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:7px 12px;cursor:pointer;font-size:13px}}
 .pgallery{{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px}}.pgallery img{{width:100%;border-radius:12px;display:block}}
 .hero{{margin:16px 0 4px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}}.hero img{{width:100%;height:auto;display:block}}
+.secbanner{{margin:4px 0 14px;border-radius:14px;overflow:hidden;border:1px solid var(--line);max-height:220px}}.secbanner img{{width:100%;height:220px;object-fit:cover;display:block}}
 .stats{{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:20px 0 6px}}
 .stat{{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px}}.stat .n{{font-size:22px;font-weight:700}}.stat .k{{color:var(--mut);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;margin-top:2px}}
 .sec{{font-size:19px;margin:32px 0 10px;display:flex;align-items:center;gap:10px}}.sec .cnt{{font-size:12px;color:var(--mut);background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:2px 9px}}
@@ -247,7 +262,7 @@ html{{scroll-behavior:smooth}}:target{{scroll-margin-top:110px}}
 .card .cbody{{margin-top:8px}}
 html[data-density="compact"] .card{{padding:9px 12px}}html[data-density="compact"] .card .text,html[data-density="compact"] .card .rsid{{display:none}}
 html[data-density="compact"] .card .label{{font-size:14px;margin-bottom:0}}html[data-density="compact"] .grid{{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
-@media print{{:root{{--bg:#fff;--panel:#fff;--ink:#111;--mut:#555;--line:#ccc}}.controls,.filters,.jumpnav,.discctl{{display:none!important}}.card,.pgxcard,.prscard,.apanel{{break-inside:avoid}}.method{{display:none}}.card.collap .cbody{{display:block!important}}}}
+@media print{{:root{{--bg:#fff;--panel:#fff;--ink:#111;--mut:#555;--line:#ccc}}.controls,.filters,.jumpnav,.discctl,.secbanner{{display:none!important}}.card,.pgxcard,.prscard,.apanel{{break-inside:avoid}}.method{{display:none}}.card.collap .cbody{{display:block!important}}}}
 </style></head><body><div class="wrap">
 <header><div><h1>🧬 {T_title}</h1><div class="blurb">100% local · nothing uploaded</div></div>
 <div class="controls">{compact_btn}{lang_switch}<button class="theme" onclick="window.print()">⬇ PDF</button>
@@ -255,7 +270,7 @@ html[data-density="compact"] .card .label{{font-size:14px;margin-bottom:0}}html[
 {hero}
 <div class="stats">{stats}</div>
 {jumpnav}
-<h2 class="sec" id="sec-ancestry">🌍 {T_anc}</h2>{anc}
+<h2 class="sec" id="sec-ancestry">🌍 {T_anc}</h2>{ancbanner}{anc}
 {appearance}
 <h2 class="sec" id="sec-prs">📊 {T_prs}</h2><div class="prsgrid">{prs}</div>
 {carrier}

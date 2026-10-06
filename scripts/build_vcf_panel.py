@@ -13,7 +13,7 @@ positions can be filled with the reference base.
 Source: Ensembl REST (rest.ensembl.org = GRCh38, grch37.rest.ensembl.org = GRCh37).
 Run:  python scripts/build_vcf_panel.py
 """
-import glob, json, os, re, time, urllib.request
+import glob, json, os, re, sys, time, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REF = os.path.join(HERE, "..", "reference")
@@ -41,6 +41,61 @@ def post(host, ids):
         except Exception:
             time.sleep(3 * (attempt + 1))
     raise RuntimeError(f"Ensembl request failed: {host}")
+
+def vep_post(ids):
+    """Ensembl VEP by rsID (canonical transcripts, HGVS)."""
+    req = urllib.request.Request(HOSTS["38"] + "/vep/human/id?canonical=1&hgvs=1",
+                                 data=json.dumps({"ids": ids}).encode(),
+                                 headers={"Content-Type": "application/json", "Accept": "application/json"},
+                                 method="POST")
+    for attempt in range(4):
+        try:
+            return json.load(urllib.request.urlopen(req, timeout=120))
+        except Exception:
+            time.sleep(3 * (attempt + 1))
+    raise RuntimeError("Ensembl VEP request failed")
+
+def annotated_rsids():
+    """rsIDs that the carrier catalog and the PGx alleles use (these get gene and HGVS)."""
+    ids = set()
+    for e in json.load(open(os.path.join(REF, "carrier_catalog.json"), encoding="utf-8")):
+        if e.get("rsid") and not e.get("untestable"):
+            ids.add(e["rsid"].lower())
+    pgx = os.path.join(REF, "pgx_catalog.json")
+    if os.path.exists(pgx):
+        for e in json.load(open(pgx, encoding="utf-8")):
+            ids |= {a["rsid"].lower() for a in e.get("alleles", [])}
+    return sorted(ids)
+
+def _short(hgvs, part):
+    """Strip the transcript prefix: 'ENST..:c.12A>G' -> 'c.12A>G'; protein part drops 'p.(..)' wrapper."""
+    if not hgvs or ":" not in hgvs:
+        return None
+    h = hgvs.split(":", 1)[1].replace("p.(", "p.").rstrip(")") if part == "p" else hgvs.split(":", 1)[1]
+    return h
+
+def annotate(panel):
+    """Add 'genes' and 'hgvs' (canonical transcripts) to the panel entries of annotated_rsids()."""
+    ids = [i for i in annotated_rsids() if i in panel]
+    for i in range(0, len(ids), 200):
+        batch = ids[i:i + 200]
+        for rec in vep_post(batch):
+            rs = rec.get("id", "").lower()
+            if rs not in panel:
+                continue
+            genes, hg = set(), set()
+            for tc in rec.get("transcript_consequences", []):
+                if tc.get("canonical") != 1:
+                    continue
+                if tc.get("gene_symbol"):
+                    genes.add(tc["gene_symbol"])
+                for key, part in (("hgvsp", "p"), ("hgvsc", "c")):
+                    h = _short(tc.get(key), part)
+                    if h:
+                        hg.add(h)
+            panel[rs]["genes"] = sorted(genes)
+            panel[rs]["hgvs"] = sorted(hg)
+    return panel
 
 def primary_mapping(rec):
     """The mapping on a primary chromosome (skip patches / alt haplotypes)."""
@@ -76,6 +131,7 @@ def main():
                          "alleles": m["allele_string"],
                          "kind": kind_of(m["allele_string"])}
         print(f"  {min(i + 200, len(ids))}/{len(ids)}")
+    annotate(panel)
     rcrs = urllib.request.urlopen("https://rest.ensembl.org/sequence/region/human/MT:1..16569:1"
                                   "?content-type=text/plain", timeout=120).read().decode().strip()
     out = {"_note": "rsID -> GRCh37/GRCh38 position + forward-strand REF (Ensembl REST). "
@@ -88,4 +144,10 @@ def main():
     print(f"wrote {OUT}: {len(panel)} rsIDs, {len(missing)} not found, rCRS {len(rcrs)} bp")
 
 if __name__ == "__main__":
-    main()
+    if "--annotate-only" in sys.argv:
+        d = json.load(open(OUT, encoding="utf-8"))
+        annotate(d["rsids"])
+        json.dump(d, open(OUT, "w", encoding="utf-8"), indent=0)
+        print("annotated", OUT)
+    else:
+        main()

@@ -805,52 +805,6 @@
 }
 },
 {
-"rsid": "rs4244285",
-"gene": "CYP2C19*2",
-"cat": "Pharmacogenomics",
-"title": "Clopidogrel / stomach-acid pills (*2)",
-"gt": {
-"GG": [
-"Normal",
-"Your liver 'drug processor' CYP2C19 works normally here.",
-"good"
-],
-"AG": [
-"Intermediate",
-"One copy of this liver processor is broken. The blood-thinner clopidogrel (Plavix) needs this enzyme to switch on, so it works less well for you; acid-reducers like omeprazole stick around longer. Worth telling a doctor if ever prescribed these.",
-"watch"
-],
-"AA": [
-"Poor",
-"Both copies broken — clopidogrel would work poorly.",
-"watch"
-]
-}
-},
-{
-"rsid": "rs12248560",
-"gene": "CYP2C19*17",
-"cat": "Pharmacogenomics",
-"title": "CYP2C19 'fast' switch (*17)",
-"gt": {
-"CC": [
-"No fast copy",
-"No speed-up variant.",
-"info"
-],
-"CT": [
-"One fast copy",
-"Somewhat faster drug clearing.",
-"info"
-],
-"TT": [
-"Ultra-fast",
-"Clears these drugs very quickly.",
-"info"
-]
-}
-},
-{
 "rsid": "rs1057910",
 "gene": "CYP2C9*3",
 "cat": "Pharmacogenomics",
@@ -986,6 +940,18 @@
 "High clot risk.",
 "watch"
 ]
+}
+},
+{
+"rsid": "rs1799963",
+"probes": ["i3002432", "rs1799963"],
+"gene": "F2",
+"cat": "Health",
+"title": "Prothrombin G20210A (blood clots)",
+"gt": {
+"GG": ["Not detected", "No copy of the prothrombin G20210A variant. Clot risk from this gene is average.", "good"],
+"AG": ["One copy", "One copy raises the risk of a vein clot about 2 to 3 times. It is common: about 7% of Ashkenazi customers carry it. The risk adds to Factor V Leiden. Confirm with an accredited lab before a medical decision.", "watch"],
+"AA": ["Two copies — confirm", "Two copies are rare and raise the clot risk more. This can also be a chip error. Confirm with an accredited lab before a medical decision.", "watch"]
 }
 },
 {

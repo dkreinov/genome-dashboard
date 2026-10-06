@@ -32,7 +32,7 @@ One offline `dashboard.html` (self-contained: inline CSS/SVG, embedded images) w
 Traits · Health · Pharmacogenomics (CPIC) · Athletic · Nutrition · Longevity ·
 Ancestry (generic Y + mtDNA haplogroup callers, continental composition, runs of
 homozygosity) · Neanderthal estimate · Polygenic risk scores (frozen GWAS-Catalog
-weights) · Ancestry carrier screen · good/bad filters · PDF button · optional
+weights) · Ashkenazi founder carrier screen with residual risk; CPIC gene-level calls for CYP2C19, TPMT/NUDT15 and DPYD · good/bad filters · PDF button · optional
 language switch.
 
 ## Usage
@@ -49,7 +49,9 @@ python run.py --input <raw_dna.txt> [--out dashboard.html] [--lang ru,es,...] [-
 - `--out`    output HTML path (default `dashboard.html`).
 - `--lang`   comma-separated target languages; each is filled by an LLM at
              generate-time. Omitted ⇒ English only. Needs `LLM_API_KEY`.
-- `--images` generate decorative hero art. Needs `IMAGE_API_KEY`. Omitted/absent ⇒ skipped.
+- `--images` generate a hero image and four section banners (carrier, medications, health, ancestry). Needs `IMAGE_API_KEY`. Set `IMAGE_PROVIDER=openai` for GPT images; the default is DashScope. Omitted/absent ⇒ skipped.
+- `scripts/verify_probes.py RAW_FILE` checks the catalog probe IDs and positions against a raw file. It prints no genotypes.
+- The medications panel shows a grey "Not tested on this chip" card for CYP2D6, because the chip cannot call it.
 
 No API keys ⇒ runs fully offline in English with no images (graceful degradation).
 

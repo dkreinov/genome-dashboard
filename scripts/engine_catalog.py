@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Catalog interpreter — per-genotype SNP cards. Generic (reads reference/catalog.json)."""
 import json, os
+import probes
 REF = os.path.join(os.path.dirname(__file__), "..", "reference")
 
 def _norm(gt):
@@ -22,7 +23,7 @@ def run(calls):
     catalog = json.load(open(os.path.join(REF,"catalog.json"), encoding="utf-8"))
     results = []
     for e in catalog:
-        rec = calls.get(e["rsid"])
+        _, rec = probes.find(calls, e)
         if not rec: continue
         raw = rec["genotype"]
         m = e["gt"].get(_norm(raw))

@@ -1,34 +1,325 @@
 [
- {"drug":"Clopidogrel (Plavix)","gene":"CYP2C19 (*2)","rsid":"rs4244285","source":"https://cpicpgx.org/guidelines/guideline-for-clopidogrel-and-cyp2c19/",
-  "gt":{"GG":["Normal metabolizer","reassuring","Normal activation of clopidogrel."],
-        "AG":["Intermediate metabolizer","caution","Reduced activation — may not thin blood enough after a stent/heart event. CPIC suggests prasugrel or ticagrelor. Tell a cardiologist."],
-        "AA":["Poor metabolizer","caution","Clopidogrel likely ineffective — an alternative antiplatelet is preferred."]}},
- {"drug":"Warfarin","gene":"CYP2C9 (*3)","rsid":"rs1057910","source":"https://cpicpgx.org/guidelines/guideline-for-warfarin-and-cyp2c9-and-vkorc1/",
-  "gt":{"AA":["Normal","reassuring","Normal CYP2C9 *3; combine with VKORC1/CYP4F2 for dosing."],
-        "AC":["Intermediate","adjust","One *3 slow copy — more sensitive to warfarin; likely a lower dose and higher early bleeding risk. Use genotype-guided dosing."],
-        "CC":["Poor","adjust","Strong sensitivity — much lower warfarin dose; genotype-guided dosing essential."]}},
- {"drug":"Statins (simvastatin)","gene":"SLCO1B1","rsid":"rs4149056","source":"https://cpicpgx.org/guidelines/cpic-guideline-for-statins/",
-  "gt":{"TT":["Normal function","reassuring","Low risk of statin muscle pain; standard dosing."],
-        "CT":["Decreased function","caution","Higher chance of statin muscle pain, esp. simvastatin."],
-        "CC":["Poor function","caution","Markedly higher statin myopathy risk."]}},
- {"drug":"Abacavir (HIV)","gene":"HLA-B*57:01 tag","rsid":"rs2395029","source":"https://cpicpgx.org/guidelines/guideline-for-abacavir-and-hla-b/",
-  "gt":{"TT":["Non-carrier","reassuring","No HLA-B*57:01 tag — low hypersensitivity risk; abacavir may be used per label."],
-        "GT":["Possible carrier","caution","Tag positive — hypersensitivity risk; confirm by HLA typing, avoid if positive."],
-        "GG":["Carrier","caution","Tag positive — avoid abacavir; confirm by HLA typing."]}},
- {"drug":"Carbamazepine / Oxcarbazepine","gene":"HLA-A*31:01 tag","rsid":"rs1061235","source":"https://cpicpgx.org/guidelines/guideline-for-carbamazepine-and-hla-b/",
-  "gt":{"TT":["Low risk","reassuring","Tag negative — lower skin-reaction risk."],
-        "AT":["Possible carrier","caution","Tag suggests possible HLA-A*31:01 — higher serious skin-reaction risk; confirm by HLA typing before use."],
-        "AA":["Carrier","caution","Higher serious skin-reaction risk; confirm by HLA typing, prefer an alternative."]}},
- {"drug":"Fluorouracil / Capecitabine (chemo)","gene":"DPYD (*2A)","rsid":"rs3918290","source":"https://cpicpgx.org/guidelines/guideline-for-fluoropyrimidines-and-dpyd/",
-  "gt":{"CC":["Normal metabolizer","reassuring","No *2A deficiency — standard fluoropyrimidine dosing."],
-        "CT":["Intermediate","caution","One non-functional copy — reduce dose; higher toxicity risk."],
-        "TT":["Poor","avoid","Deficient — these chemo drugs can cause severe/fatal toxicity; avoid or drastically reduce."]}},
- {"drug":"Thiopurines (azathioprine, 6-MP)","gene":"TPMT (*3C)","rsid":"rs1142345","source":"https://cpicpgx.org/guidelines/guideline-for-thiopurines-and-tpmt/",
-  "gt":{"TT":["Normal metabolizer","reassuring","Reference (no *3C) — standard thiopurine dosing."],
-        "CT":["Intermediate","adjust","One low-function copy — reduced dose recommended."],
-        "CC":["Poor","avoid","Deficient — severe marrow toxicity risk; greatly reduced dose or alternative."]}},
- {"drug":"Tacrolimus (transplant)","gene":"CYP3A5 (*3)","rsid":"rs776746","source":"https://cpicpgx.org/guidelines/guideline-for-tacrolimus-and-cyp3a5/",
-  "gt":{"TT":["Non-expresser (*3/*3)","standard","Standard label starting dose reaches target; monitor troughs."],
-        "CT":["Expresser","adjust","Expresser — often needs ~1.5-2x higher tacrolimus dose."],
-        "CC":["Expresser","adjust","Expresser — often needs higher tacrolimus dose."]}}
+ {
+  "drug": "Clopidogrel, PPIs, some antidepressants",
+  "gene": "CYP2C19",
+  "rule": "cyp2c19",
+  "source": "https://cpicpgx.org/guidelines/guideline-for-clopidogrel-and-cyp2c19/",
+  "alleles": [
+   {
+    "name": "*2",
+    "gene": "CYP2C19",
+    "rsid": "rs4244285",
+    "probes": [
+     "rs4244285"
+    ],
+    "ref": "G",
+    "alt": "A",
+    "value": 0
+   },
+   {
+    "name": "*3",
+    "gene": "CYP2C19",
+    "rsid": "rs4986893",
+    "probes": [
+     "rs4986893"
+    ],
+    "ref": "G",
+    "alt": "A",
+    "value": 0
+   },
+   {
+    "name": "*4",
+    "gene": "CYP2C19",
+    "rsid": "rs28399504",
+    "probes": [
+     "rs28399504"
+    ],
+    "ref": "A",
+    "alt": "G",
+    "value": 0
+   },
+   {
+    "name": "*17",
+    "gene": "CYP2C19",
+    "rsid": "rs12248560",
+    "probes": [
+     "rs12248560"
+    ],
+    "ref": "C",
+    "alt": "T",
+    "value": 0
+   }
+  ]
+ },
+ {
+  "drug": "Thiopurines (azathioprine, mercaptopurine)",
+  "gene": "TPMT + NUDT15",
+  "rule": "thiopurine",
+  "source": "https://cpicpgx.org/guidelines/guideline-for-thiopurines-and-tpmt/",
+  "alleles": [
+   {
+    "name": "TPMT*2",
+    "gene": "TPMT",
+    "rsid": "rs1800462",
+    "probes": [
+     "rs1800462"
+    ],
+    "ref": "C",
+    "alt": "G",
+    "value": 0
+   },
+   {
+    "name": "TPMT*3B",
+    "gene": "TPMT",
+    "rsid": "rs1800460",
+    "probes": [
+     "rs1800460"
+    ],
+    "ref": "C",
+    "alt": "T",
+    "value": 0
+   },
+   {
+    "name": "TPMT*3C",
+    "gene": "TPMT",
+    "rsid": "rs1142345",
+    "probes": [
+     "rs1142345"
+    ],
+    "ref": "T",
+    "alt": "C",
+    "value": 0
+   },
+   {
+    "name": "NUDT15*3",
+    "gene": "NUDT15",
+    "rsid": "rs116855232",
+    "probes": [
+     "rs116855232"
+    ],
+    "ref": "C",
+    "alt": "T",
+    "value": 0
+   }
+  ]
+ },
+ {
+  "drug": "Fluoropyrimidines (5-FU, capecitabine)",
+  "gene": "DPYD",
+  "rule": "dpyd",
+  "source": "https://cpicpgx.org/guidelines/guideline-for-fluoropyrimidines-and-dpyd/",
+  "alleles": [
+   {
+    "name": "*2A",
+    "gene": "DPYD",
+    "rsid": "rs3918290",
+    "probes": [
+     "rs3918290"
+    ],
+    "ref": "C",
+    "alt": "T",
+    "value": 0
+   },
+   {
+    "name": "*13",
+    "gene": "DPYD",
+    "rsid": "rs55886062",
+    "probes": [
+     "rs55886062"
+    ],
+    "ref": "A",
+    "alt": "C",
+    "value": 0
+   },
+   {
+    "name": "c.2846A>T",
+    "gene": "DPYD",
+    "rsid": "rs67376798",
+    "probes": [
+     "rs67376798"
+    ],
+    "ref": "T",
+    "alt": "A",
+    "value": 0.5
+   },
+   {
+    "name": "HapB3",
+    "gene": "DPYD",
+    "rsid": "rs75017182",
+    "probes": [
+     "rs75017182"
+    ],
+    "ref": "G",
+    "alt": "C",
+    "value": 0.5
+   }
+  ]
+ },
+ {
+  "drug": "Warfarin",
+  "gene": "CYP2C9 (*3)",
+  "rsid": "rs1057910",
+  "source": "https://cpicpgx.org/guidelines/guideline-for-warfarin-and-cyp2c9-and-vkorc1/",
+  "gt": {
+   "AA": [
+    "Normal",
+    "reassuring",
+    "Normal CYP2C9 *3; combine with VKORC1/CYP4F2 for dosing."
+   ],
+   "AC": [
+    "Intermediate",
+    "adjust",
+    "One *3 slow copy — more sensitive to warfarin; likely a lower dose and higher early bleeding risk. Use genotype-guided dosing. Confirm with a clinical test before a drug decision."
+   ],
+   "CC": [
+    "Poor",
+    "adjust",
+    "Strong sensitivity — much lower warfarin dose; genotype-guided dosing essential. Confirm with a clinical test before a drug decision."
+   ]
+  }
+ },
+ {
+  "drug": "Statins (all types)",
+  "gene": "SLCO1B1",
+  "rsid": "rs4149056",
+  "source": "https://cpicpgx.org/guidelines/cpic-guideline-for-statins/",
+  "gt": {
+   "TT": [
+    "Normal function",
+    "reassuring",
+    "Normal statin transport at this position."
+   ],
+   "CT": [
+    "Decreased function",
+    "adjust",
+    "CPIC (2022) advises a lower dose or another statin for some statins, for example simvastatin max 20 mg. Confirm with a clinical test before a drug decision."
+   ],
+   "CC": [
+    "Poor function",
+    "caution",
+    "Higher risk of statin muscle pain. CPIC (2022) advises to avoid simvastatin and to limit other statin doses. Confirm with a clinical test before a drug decision."
+   ]
+  }
+ },
+ {
+  "drug": "Abacavir (HIV)",
+  "gene": "HLA-B*57:01 tag",
+  "rsid": "rs2395029",
+  "source": "https://cpicpgx.org/guidelines/guideline-for-abacavir-and-hla-b/",
+  "gt": {
+   "TT": [
+    "Non-carrier",
+    "reassuring",
+    "No HLA-B*57:01 tag — low hypersensitivity risk; abacavir may be used per label."
+   ],
+   "GT": [
+    "Possible carrier",
+    "caution",
+    "Tag positive — hypersensitivity risk; confirm by HLA typing, avoid if positive."
+   ],
+   "GG": [
+    "Carrier",
+    "caution",
+    "Tag positive — avoid abacavir; confirm by HLA typing."
+   ]
+  }
+ },
+ {
+  "drug": "Carbamazepine / Oxcarbazepine",
+  "gene": "HLA-A*31:01 tag",
+  "rsid": "rs1061235",
+  "source": "https://cpicpgx.org/guidelines/guideline-for-carbamazepine-and-hla-b/",
+  "gt": {
+   "TT": [
+    "Low risk",
+    "reassuring",
+    "Tag negative — lower skin-reaction risk."
+   ],
+   "AT": [
+    "Possible carrier",
+    "caution",
+    "Tag suggests possible HLA-A*31:01 — higher serious skin-reaction risk; confirm by HLA typing before use."
+   ],
+   "AA": [
+    "Carrier",
+    "caution",
+    "Higher serious skin-reaction risk; confirm by HLA typing, prefer an alternative."
+   ]
+  }
+ },
+ {
+  "drug": "Tacrolimus (transplant)",
+  "gene": "CYP3A5 (*3)",
+  "rsid": "rs776746",
+  "source": "https://cpicpgx.org/guidelines/guideline-for-tacrolimus-and-cyp3a5/",
+  "gt": {
+   "TT": [
+    "Non-expresser (*3/*3)",
+    "standard",
+    "Standard label starting dose reaches target; monitor troughs. Confirm with a clinical test before a drug decision."
+   ],
+   "CT": [
+    "Expresser",
+    "adjust",
+    "Expresser — often needs ~1.5-2x higher tacrolimus dose. Confirm with a clinical test before a drug decision."
+   ],
+   "CC": [
+    "Expresser",
+    "adjust",
+    "Expresser — often needs higher tacrolimus dose. Confirm with a clinical test before a drug decision."
+   ]
+  }
+ },
+ {
+  "drug": "Warfarin (dose fine-tuning)",
+  "gene": "CYP4F2 (*3)",
+  "rsid": "rs2108622",
+  "source": "https://cpicpgx.org/guidelines/guideline-for-warfarin-and-cyp2c9-and-vkorc1/",
+  "gt": {
+   "CC": [
+    "Normal",
+    "reassuring",
+    "No CYP4F2*3. Use the CYP2C9 and VKORC1 results for the warfarin dose."
+   ],
+   "CT": [
+    "One *3 copy",
+    "adjust",
+    "CPIC adds about 5–10% to the warfarin dose for each *3 copy, together with CYP2C9 and VKORC1. Confirm with a clinical test before a drug decision."
+   ],
+   "TT": [
+    "Two *3 copies",
+    "adjust",
+    "CPIC adds about 5–10% to the warfarin dose for each *3 copy. Confirm with a clinical test before a drug decision."
+   ]
+  }
+ },
+ {
+  "drug": "Rosuvastatin",
+  "gene": "ABCG2 (Q141K)",
+  "rsid": "rs2231142",
+  "source": "https://cpicpgx.org/guidelines/cpic-guideline-for-statins/",
+  "gt": {
+   "GG": [
+    "Normal function",
+    "reassuring",
+    "Standard rosuvastatin dose."
+   ],
+   "GT": [
+    "Decreased function",
+    "adjust",
+    "CPIC (2022) advises a rosuvastatin start dose of 20 mg or less. Confirm with a clinical test before a drug decision."
+   ],
+   "TT": [
+    "Poor function",
+    "adjust",
+    "CPIC (2022) advises a rosuvastatin start dose of 10 mg or less. Confirm with a clinical test before a drug decision."
+   ]
+  }
+ },
+ {
+  "drug": "Codeine, tramadol, tamoxifen, many antidepressants",
+  "gene": "CYP2D6",
+  "source": "https://cpicpgx.org/guidelines/",
+  "untestable": "The 23andMe v5 chip does not have the key CYP2D6 alleles (*4, *10, *41) and cannot read gene copy number. No chip result is reliable. Ask for a clinical CYP2D6 test before you use these drugs."
+ }
 ]

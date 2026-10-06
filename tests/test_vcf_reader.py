@@ -120,11 +120,15 @@ def main():
                   if not any(v["chrom"] == "MT" and v["pos"] == p and v["genotype"] == b[0] for v in vcf_calls.values())]
         res = run_analysis.analyze(path)                 # every engine must run on VCF input
         info = diff(want, comparable(res))
-        ok = not bad and not mt_bad
+        vc = {(c["disease"], c["variant"]): c["category"] for c in comparable(res)["carrier"]["variants"]}
+        cat_bad = [f"{c['disease']} {c['variant']}: chip={c['category']} vcf={vc.get((c['disease'], c['variant']))}"
+                   for c in want["carrier"]["variants"]
+                   if c["category"] != "untestable" and vc.get((c["disease"], c["variant"])) != c["category"]]
+        ok = not bad and not mt_bad and not cat_bad
         print(f"{name}: {n} variant rows | {checked} panel genotypes checked, {len(bad)} wrong | "
               f"mt wrong {len(mt_bad)} | engines ran, {len(info)} info-diffs (extra coverage) -> "
               f"{'OK' if ok else 'FAIL'}")
-        for line in bad[:10] + [f"MT:{p}" for p in mt_bad[:5]]:
+        for line in bad[:10] + cat_bad[:10] + [f"MT:{p}" for p in mt_bad[:5]]:
             print("   ", line)
         failed |= not ok
     print("engine differences (from extra WGS coverage, informational):")

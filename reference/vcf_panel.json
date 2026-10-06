@@ -107,6 +107,34 @@
 "alleles": "T/C",
 "kind": "snv"
 },
+"rs104886456": {
+"chrom": "9",
+"pos37": 97934315,
+"pos38": 95172033,
+"ref": "T",
+"alleles": "T/A",
+"kind": "snv",
+"genes": [
+"FANCC"
+],
+"hgvs": [
+"c.456+4A>T"
+]
+},
+"rs104886461": {
+"chrom": "19",
+"pos37": 7591645,
+"pos38": 7526759,
+"ref": "A",
+"alleles": "A/G",
+"kind": "snv",
+"genes": [
+"MCOLN1"
+],
+"hgvs": [
+"c.406-2A>G"
+]
+},
 "rs10490924": {
 "chrom": "10",
 "pos37": 124214448,
@@ -235,6 +263,38 @@
 "alleles": "A/G",
 "kind": "snv"
 },
+"rs111033171": {
+"chrom": "9",
+"pos37": 111662096,
+"pos38": 108899816,
+"ref": "A",
+"alleles": "A/G",
+"kind": "snv",
+"genes": [
+"ELP1"
+],
+"hgvs": [
+"c.2204+6T>C"
+]
+},
+"rs111033258": {
+"chrom": "3",
+"pos37": 150690352,
+"pos38": 150972565,
+"ref": "A",
+"alleles": "A/C",
+"kind": "snv",
+"genes": [
+"CLRN1",
+"SIAH2-AS1"
+],
+"hgvs": [
+"c.144T>G",
+"n.124-90361A>C",
+"n.236-29009A>C",
+"p.Asn48Lys"
+]
+},
 "rs1111875": {
 "chrom": "10",
 "pos37": 94462882,
@@ -331,13 +391,77 @@
 "alleles": "T/A",
 "kind": "snv"
 },
+"rs113993959": {
+"chrom": "7",
+"pos37": 117227832,
+"pos38": 117587778,
+"ref": "G",
+"alleles": "G/A/T",
+"kind": "snv",
+"genes": [
+"CFTR"
+],
+"hgvs": [
+"c.1624G>A",
+"c.1624G>T",
+"p.Gly542Arg",
+"p.Gly542Ter"
+]
+},
+"rs113993960": {
+"chrom": "7",
+"pos37": 117199645,
+"pos38": 117559591,
+"ref": "TCTT",
+"alleles": "TCTT/T/TCTTCTT",
+"kind": "indel",
+"genes": [
+"CFTR",
+"CFTR-AS1"
+],
+"hgvs": [
+"c.1521_1523del",
+"c.1523_1524insCTT",
+"p.Phe508del",
+"p.Phe508dup"
+]
+},
+"rs113993962": {
+"chrom": "15",
+"pos37": 91310153,
+"pos38": 90766923,
+"ref": "ATCTGA",
+"alleles": "ATCTGA/TAGATTC",
+"kind": "indel",
+"genes": [
+"BLM"
+],
+"hgvs": [
+"c.2207_2212delinsTAGATTC",
+"p.Tyr736LeufsTer5"
+]
+},
 "rs1142345": {
 "chrom": "6",
 "pos37": 18130918,
 "pos38": 18130687,
 "ref": "T",
 "alleles": "T/A/C/G",
-"kind": "snv"
+"kind": "snv",
+"genes": [
+"TPMT"
+],
+"hgvs": [
+"c.719A>C",
+"c.719A>G",
+"c.719A>T",
+"n.267+7581T>A",
+"n.267+7581T>C",
+"n.267+7581T>G",
+"p.Tyr240Cys",
+"p.Tyr240Phe",
+"p.Tyr240Ser"
+]
 },
 "rs1165151": {
 "chrom": "6",
@@ -427,6 +551,42 @@
 "alleles": "A/G",
 "kind": "snv"
 },
+"rs120074117": {
+"chrom": "11",
+"pos37": 6415434,
+"pos38": 6394204,
+"ref": "G",
+"alleles": "G/A/C/T",
+"kind": "snv",
+"genes": [
+"APBB1",
+"SMPD1"
+],
+"hgvs": [
+"c.1493G>A",
+"c.1493G>C",
+"c.1493G>T",
+"p.Arg498His",
+"p.Arg498Leu",
+"p.Arg498Pro"
+]
+},
+"rs120074124": {
+"chrom": "11",
+"pos37": 6413206,
+"pos38": 6391976,
+"ref": "T",
+"alleles": "T/C",
+"kind": "snv",
+"genes": [
+"APBB1",
+"SMPD1"
+],
+"hgvs": [
+"c.911T>C",
+"p.Leu304Pro"
+]
+},
 "rs12190287": {
 "chrom": "6",
 "pos37": 134214525,
@@ -434,6 +594,75 @@
 "ref": "C",
 "alleles": "C/A/G/T",
 "kind": "snv"
+},
+"rs121907954": {
+"chrom": "15",
+"pos37": 72642859,
+"pos38": 72350518,
+"ref": "C",
+"alleles": "C/G/T",
+"kind": "snv",
+"genes": [
+"CELF6-AS1",
+"HEXA"
+],
+"hgvs": [
+"c.805G>A",
+"c.805G>C",
+"n.1872C>G",
+"n.1872C>T",
+"p.Gly269Arg",
+"p.Gly269Ser"
+]
+},
+"rs121964990": {
+"chrom": "7",
+"pos37": 107555951,
+"pos38": 107915506,
+"ref": "G",
+"alleles": "G/A/C/T",
+"kind": "snv",
+"genes": [
+"DLD"
+],
+"hgvs": [
+"c.685G>A",
+"c.685G>C",
+"c.685G>T",
+"p.Gly229Arg",
+"p.Gly229Cys",
+"p.Gly229Ser"
+]
+},
+"rs121965063": {
+"chrom": "4",
+"pos37": 187195347,
+"pos38": 186274193,
+"ref": "G",
+"alleles": "G/T",
+"kind": "snv",
+"genes": [
+"F11"
+],
+"hgvs": [
+"c.403G>T",
+"p.Glu135Ter"
+]
+},
+"rs121965064": {
+"chrom": "4",
+"pos37": 187201412,
+"pos38": 186280258,
+"ref": "T",
+"alleles": "T/C",
+"kind": "snv",
+"genes": [
+"F11"
+],
+"hgvs": [
+"c.901T>C",
+"p.Phe301Leu"
+]
 },
 "rs12203592": {
 "chrom": "6",
@@ -449,14 +678,6 @@
 "pos38": 65412466,
 "ref": "T",
 "alleles": "T/C/G",
-"kind": "snv"
-},
-"rs12248560": {
-"chrom": "10",
-"pos37": 96521657,
-"pos38": 94761900,
-"ref": "C",
-"alleles": "C/A/T",
 "kind": "snv"
 },
 "rs1229984": {
@@ -690,6 +911,21 @@
 "ref": "T",
 "alleles": "T/G",
 "kind": "snv"
+},
+"rs151344623": {
+"chrom": "11",
+"pos37": 17418602,
+"pos38": 17397055,
+"ref": "C",
+"alleles": "C/G/T",
+"kind": "snv",
+"genes": [
+"ABCC8"
+],
+"hgvs": [
+"c.3989-9G>A",
+"c.3989-9G>C"
+]
 },
 "rs1556249": {
 "chrom": "9",
@@ -1219,6 +1455,14 @@
 "alleles": "C/G/T",
 "kind": "snv"
 },
+"rs1799963": {
+"chrom": "11",
+"pos37": 46761055,
+"pos38": 46739505,
+"ref": "G",
+"alleles": "G/A",
+"kind": "snv"
+},
 "rs1799990": {
 "chrom": "20",
 "pos37": 4680251,
@@ -1298,6 +1542,21 @@
 "ref": "G",
 "alleles": "G/A/C",
 "kind": "snv"
+},
+"rs1801175": {
+"chrom": "17",
+"pos37": 41055964,
+"pos38": 42903947,
+"ref": "C",
+"alleles": "C/T",
+"kind": "snv",
+"genes": [
+"G6PC1"
+],
+"hgvs": [
+"c.247C>T",
+"p.Arg83Cys"
+]
 },
 "rs1801253": {
 "chrom": "10",
@@ -1969,7 +2228,15 @@
 "pos38": 94762706,
 "ref": "A",
 "alleles": "A/G/T",
-"kind": "snv"
+"kind": "snv",
+"genes": [
+"CYP2C19"
+],
+"hgvs": [
+"c.1A>G",
+"c.1A>T",
+"p.Met1?"
+]
 },
 "rs28502681": {
 "chrom": "MT",
@@ -2033,7 +2300,14 @@
 "pos38": 3499000,
 "ref": "A",
 "alleles": "A/C",
-"kind": "snv"
+"kind": "snv",
+"genes": [
+"ASPA"
+],
+"hgvs": [
+"c.854A>C",
+"p.Glu285Ala"
+]
 },
 "rs28940574": {
 "chrom": "17",
@@ -2041,7 +2315,16 @@
 "pos38": 3499060,
 "ref": "C",
 "alleles": "C/A/T",
-"kind": "snv"
+"kind": "snv",
+"genes": [
+"ASPA"
+],
+"hgvs": [
+"c.914C>A",
+"c.914C>T",
+"p.Ala305Glu",
+"p.Ala305Val"
+]
 },
 "rs2917400": {
 "chrom": "Y",
@@ -2355,6 +2638,38 @@
 "alleles": "T/C",
 "kind": "snv"
 },
+"rs387906309": {
+"chrom": "15",
+"pos37": 72638921,
+"pos38": 72346580,
+"ref": "GATA",
+"alleles": "GATA/GATAGATA",
+"kind": "indel",
+"genes": [
+"CELF6-AS1",
+"HEXA"
+],
+"hgvs": [
+"c.1274_1277dup",
+"n.1360_1363dup",
+"p.Tyr427IlefsTer5"
+]
+},
+"rs387906315": {
+"chrom": "1",
+"pos37": 155210452,
+"pos38": 155240661,
+"ref": "C",
+"alleles": "C/CC",
+"kind": "indel",
+"genes": [
+"GBA1"
+],
+"hgvs": [
+"c.84dup",
+"p.Leu29AlafsTer18"
+]
+},
 "rs3897": {
 "chrom": "Y",
 "pos37": 18571026,
@@ -2409,7 +2724,15 @@
 "pos38": 97450058,
 "ref": "C",
 "alleles": "C/A/G/T",
-"kind": "snv"
+"kind": "snv",
+"genes": [
+"DPYD"
+],
+"hgvs": [
+"c.1905+1G>A",
+"c.1905+1G>C",
+"c.1905+1G>T"
+]
 },
 "rs3923809": {
 "chrom": "6",
@@ -2513,7 +2836,16 @@
 "pos38": 94781859,
 "ref": "G",
 "alleles": "G/A/C/T",
-"kind": "snv"
+"kind": "snv",
+"genes": [
+"CYP2C19"
+],
+"hgvs": [
+"c.681G>A",
+"c.681G>C",
+"c.681G>T",
+"p.Pro227="
+]
 },
 "rs4253778": {
 "chrom": "22",
@@ -3083,6 +3415,26 @@
 "alleles": "G/A",
 "kind": "snv"
 },
+"rs76173977": {
+"chrom": "15",
+"pos37": 72640388,
+"pos38": 72348047,
+"ref": "C",
+"alleles": "C/A/G/T",
+"kind": "snv",
+"genes": [
+"CELF6-AS1",
+"HEXA"
+],
+"hgvs": [
+"c.1073+1G>A",
+"c.1073+1G>C",
+"c.1073+1G>T",
+"n.1577+1250C>A",
+"n.1577+1250C>G",
+"n.1577+1250C>T"
+]
+},
 "rs762551": {
 "chrom": "15",
 "pos37": 75041917,
@@ -3098,6 +3450,44 @@
 "ref": "T",
 "alleles": "T/C/G",
 "kind": "snv"
+},
+"rs76763715": {
+"chrom": "1",
+"pos37": 155205634,
+"pos38": 155235843,
+"ref": "T",
+"alleles": "T/C/G",
+"kind": "snv",
+"genes": [
+"GBA1",
+"MTX1LP"
+],
+"hgvs": [
+"c.1226A>C",
+"c.1226A>G",
+"p.Asn409Ser",
+"p.Asn409Thr"
+]
+},
+"rs77010898": {
+"chrom": "7",
+"pos37": 117282620,
+"pos38": 117642566,
+"ref": "G",
+"alleles": "G/A/C",
+"kind": "snv",
+"genes": [
+"CFTR",
+"CFTR-AS2"
+],
+"hgvs": [
+"c.3846G>A",
+"c.3846G>C",
+"n.65+4785C>G",
+"n.65+4785C>T",
+"p.Trp1282Cys",
+"p.Trp1282Ter"
+]
 },
 "rs7754840": {
 "chrom": "6",
@@ -3171,13 +3561,103 @@
 "alleles": "C/T",
 "kind": "snv"
 },
+"rs79761867": {
+"chrom": "6",
+"pos37": 80878662,
+"pos38": 80168945,
+"ref": "G",
+"alleles": "G/A/C",
+"kind": "snv",
+"genes": [
+"BCKDHB"
+],
+"hgvs": [
+"c.548G>A",
+"c.548G>C",
+"p.Arg183Gln",
+"p.Arg183Pro"
+]
+},
+"rs80034486": {
+"chrom": "7",
+"pos37": 117292931,
+"pos38": 117652877,
+"ref": "C",
+"alleles": "C/G",
+"kind": "snv",
+"genes": [
+"CFTR"
+],
+"hgvs": [
+"c.3909C>G",
+"p.Asn1303Lys"
+]
+},
+"rs80338939": {
+"chrom": "13",
+"pos37": 20763686,
+"pos38": 20189547,
+"ref": "CCCCCC",
+"alleles": "CCCCCC/CCCCC/CCCCCCC",
+"kind": "indel",
+"genes": [
+"GJB2"
+],
+"hgvs": [
+"c.35_36insG",
+"c.35del",
+"n.232-3967_232-3966insG",
+"n.232-3967del",
+"p.Gly12ValfsTer2",
+"p.Val13CysfsTer35"
+]
+},
+"rs80338942": {
+"chrom": "13",
+"pos37": 20763554,
+"pos38": 20189415,
+"ref": "A",
+"alleles": "A/-",
+"kind": "indel",
+"genes": [
+"GJB2"
+],
+"hgvs": [
+"c.167del",
+"n.232-3835del",
+"p.Leu56ArgfsTer26"
+]
+},
+"rs80356769": {
+"chrom": "1",
+"pos37": 155205563,
+"pos38": 155235772,
+"ref": "C",
+"alleles": "C/A",
+"kind": "snv",
+"genes": [
+"GBA1",
+"MTX1LP"
+],
+"hgvs": [
+"c.1297G>T",
+"p.Val433Leu"
+]
+},
 "rs80357906": {
 "chrom": "17",
 "pos37": 41209080,
 "pos38": 43057063,
 "ref": "GGG",
 "alleles": "GGG/GGGG",
-"kind": "indel"
+"kind": "indel",
+"genes": [
+"BRCA1"
+],
+"hgvs": [
+"c.5264dup",
+"p.Gln1756ProfsTer74"
+]
 },
 "rs80357914": {
 "chrom": "17",
@@ -3185,7 +3665,17 @@
 "pos38": 43124028,
 "ref": "CTCT",
 "alleles": "CTCT/CT/CTCTCT",
-"kind": "indel"
+"kind": "indel",
+"genes": [
+"BRCA1",
+"NBR2"
+],
+"hgvs": [
+"c.68_69del",
+"c.69_70insAG",
+"p.Cys24SerfsTer8",
+"p.Glu23ValfsTer17"
+]
 },
 "rs80359550": {
 "chrom": "13",
@@ -3193,7 +3683,14 @@
 "pos38": 32340301,
 "ref": "T",
 "alleles": "T/-",
-"kind": "indel"
+"kind": "indel",
+"genes": [
+"BRCA2"
+],
+"hgvs": [
+"c.5946del",
+"p.Ser1982ArgfsTer22"
+]
 },
 "rs8050136": {
 "chrom": "16",
@@ -3762,6 +4259,241 @@
 "ref": "T",
 "alleles": "T/A",
 "kind": "snv"
+},
+"rs12948217": {
+"chrom": "17",
+"pos37": 3397702,
+"pos38": 3494408,
+"ref": "C",
+"alleles": "C/A/T",
+"kind": "snv",
+"genes": [
+"ASPA"
+],
+"hgvs": [
+"c.693C>A",
+"c.693C>T",
+"p.Tyr231=",
+"p.Tyr231Ter"
+]
+},
+"rs111033260": {
+"chrom": "10",
+"pos37": 56077174,
+"pos38": 54317414,
+"ref": "G",
+"alleles": "G/A/T",
+"kind": "snv",
+"genes": [
+"PCDH15"
+],
+"hgvs": [
+"c.733C>A",
+"c.733C>T",
+"p.Arg245=",
+"p.Arg245Ter"
+]
+},
+"rs387906289": {
+"chrom": "11",
+"pos37": 6413286,
+"pos38": 6392056,
+"ref": "CCCCCC",
+"alleles": "CCCCCC/CCCCC/CCCCCCC",
+"kind": "indel",
+"genes": [
+"APBB1",
+"SMPD1"
+],
+"hgvs": [
+"c.996_997insC",
+"c.996del",
+"p.Phe333LeufsTer3",
+"p.Phe333SerfsTer52"
+]
+},
+"rs386834233": {
+"chrom": "6",
+"pos37": 80910740,
+"pos38": 80201023,
+"ref": "G",
+"alleles": "G/A",
+"kind": "snv",
+"genes": [
+"BCKDHB"
+],
+"hgvs": [
+"c.832G>A",
+"p.Gly278Ser"
+]
+},
+"rs151344624": {
+"chrom": "11",
+"pos37": 17417435,
+"pos38": 17395888,
+"ref": "AGAAG",
+"alleles": "AGAAG/AG",
+"kind": "indel",
+"genes": [
+"ABCC8"
+],
+"hgvs": [
+"c.4158_4160del",
+"p.Phe1387del"
+]
+},
+"rs75039782": {
+"chrom": "7",
+"pos37": 117280015,
+"pos38": 117639961,
+"ref": "C",
+"alleles": "C/A/G/T",
+"kind": "snv",
+"genes": [
+"CFTR",
+"CFTR-AS2"
+],
+"hgvs": [
+"c.3718-2477C>A",
+"c.3718-2477C>G",
+"c.3718-2477C>T",
+"n.65+7390G>A",
+"n.65+7390G>C",
+"n.65+7390G>T"
+]
+},
+"rs116855232": {
+"chrom": "13",
+"pos37": 48619855,
+"pos38": 48045719,
+"ref": "C",
+"alleles": "C/T",
+"kind": "snv",
+"genes": [
+"NUDT15"
+],
+"hgvs": [
+"c.415C>T",
+"p.Arg139Cys"
+]
+},
+"rs12248560": {
+"chrom": "10",
+"pos37": 96521657,
+"pos38": 94761900,
+"ref": "C",
+"alleles": "C/A/T",
+"kind": "snv",
+"genes": [
+"CYP2C19"
+],
+"hgvs": []
+},
+"rs1800460": {
+"chrom": "6",
+"pos37": 18139228,
+"pos38": 18138997,
+"ref": "C",
+"alleles": "C/A/T",
+"kind": "snv",
+"genes": [
+"TPMT"
+],
+"hgvs": [
+"c.460G>A",
+"c.460G>T",
+"n.268-10491C>A",
+"n.268-10491C>T",
+"p.Ala154Ser",
+"p.Ala154Thr"
+]
+},
+"rs1800462": {
+"chrom": "6",
+"pos37": 18143955,
+"pos38": 18143724,
+"ref": "C",
+"alleles": "C/G",
+"kind": "snv",
+"genes": [
+"TPMT"
+],
+"hgvs": [
+"c.238G>C",
+"n.268-5764C>G",
+"p.Ala80Pro"
+]
+},
+"rs2108622": {
+"chrom": "19",
+"pos37": 15990431,
+"pos38": 15879621,
+"ref": "C",
+"alleles": "C/A/G/T",
+"kind": "snv"
+},
+"rs4986893": {
+"chrom": "10",
+"pos37": 96540410,
+"pos38": 94780653,
+"ref": "G",
+"alleles": "G/A",
+"kind": "snv",
+"genes": [
+"CYP2C19"
+],
+"hgvs": [
+"c.636G>A",
+"p.Trp212Ter"
+]
+},
+"rs55886062": {
+"chrom": "1",
+"pos37": 97981343,
+"pos38": 97515787,
+"ref": "A",
+"alleles": "A/C/T",
+"kind": "snv",
+"genes": [
+"DPYD"
+],
+"hgvs": [
+"c.1679T>A",
+"c.1679T>G",
+"p.Ile560Asn",
+"p.Ile560Ser"
+]
+},
+"rs67376798": {
+"chrom": "1",
+"pos37": 97547947,
+"pos38": 97082391,
+"ref": "T",
+"alleles": "T/A",
+"kind": "snv",
+"genes": [
+"DPYD"
+],
+"hgvs": [
+"c.2846A>T",
+"p.Asp949Val"
+]
+},
+"rs75017182": {
+"chrom": "1",
+"pos37": 98045449,
+"pos38": 97579893,
+"ref": "G",
+"alleles": "G/A/C/T",
+"kind": "snv",
+"genes": [
+"DPYD"
+],
+"hgvs": [
+"c.1129-5923C>A",
+"c.1129-5923C>G",
+"c.1129-5923C>T"
+]
 }
 }
 }

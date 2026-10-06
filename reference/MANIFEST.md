@@ -9,6 +9,8 @@ Re-pull with `python scripts/refresh_reference.py` (opt-in, needs network).
 | allele_freqs.json | Ensembl REST / 1000 Genomes phase 3 | 2026-07 | per-SNP superpopulation allele freqs (EUR/EAS/AFR/SAS/AMR). |
 | gwas_weights_raw.json | EBI GWAS Catalog REST | 2026-07 | reported risk allele + odds ratios per SNP/trait. |
 | prs_weights.json | derived (Step 5) from gwas_weights_raw + curated | 2026-07 | vetted, LD-pruned, palindrome-safe scoring weights. |
-| vcf_panel.json | Ensembl REST (GRCh38 + GRCh37 /variation, MT rCRS sequence) | 2026-10 | rsID → GRCh37/38 position + REF allele for the VCF reader; rebuild with `scripts/build_vcf_panel.py`. 6 retired Y rsIDs not found. |
+| vcf_panel.json | Ensembl REST (GRCh38 + GRCh37 /variation, MT rCRS sequence) | 2026-10 | rsID → GRCh37/38 position + REF allele for the VCF reader; rebuild with `scripts/build_vcf_panel.py`. The gene and HGVS fields come from Ensembl VEP. 6 retired Y rsIDs not found. |
+| carrier_catalog.json | 23andMe v5 FDA package insert; SNPedia "i" ID mapping; Ensembl alleles | 2026-10 | founder variants with tier, AJ carrier %, residual risk |
+| pgx_catalog.json | CPIC guidelines (CYP2C19, TPMT, NUDT15, DPYD and single-SNP drug genes) | 2026-10 | gene-level rules and phenotypes; CYP2D6 listed as not testable |
 
 Data are used for educational interpretation only. Not clinical-grade.

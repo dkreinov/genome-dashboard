@@ -35,6 +35,7 @@ def main():
     if a.images:
         if cfg.has_images():
             import gen_images; images = gen_images.generate(cfg)
+            images.update(gen_images.generate_sections(cfg, ["sec-carrier", "sec-meds", "sec-health", "sec-ancestry"]))
             print(f"[2/4] images: {len(images)} generated")
         else:
             print("[2/4] images skipped — no IMAGE_API_KEY")

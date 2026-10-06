@@ -27,7 +27,7 @@
 Turn a personal raw DNA file into a single **offline, self-contained HTML dashboard** —
 traits, health, pharmacogenomics, athletic, nutrition, longevity, facial tendencies, ancestry
 (Y & mtDNA haplogroups + continental composition + runs of homozygosity), a Neanderthal estimate,
-polygenic risk scores, a carrier screen, and an optional DNA-based portrait.
+polygenic risk scores, an Ashkenazi-focused carrier screen (FDA-validated founder variants, read from 23andMe "i" ID probes), and an optional DNA-based portrait.
 
 **Input:** a 23andMe or AncestryDNA raw file, or a whole-genome sequencing **VCF / gVCF** file
 (GRCh37 or GRCh38). See [Using a whole-genome VCF](#using-a-whole-genome-vcf).
@@ -68,7 +68,7 @@ The report opens with a **sticky jump-nav** (click a section to scroll to it, ac
   (`.vcf` / `.vcf.gz`, GRCh37 or GRCh38) — format and build auto-detected
 - `--out`    output path (default dashboard.html)
 - `--lang ru,es`  add languages (needs `LLM_API_KEY`; a live switch appears in the report)
-- `--images`      decorative hero art (needs `IMAGE_API_KEY`; generic prompts only, never your DNA)
+- `--images`      hero art and section banners (needs `IMAGE_API_KEY`; `IMAGE_PROVIDER=openai` uses the GPT image API, default model `gpt-image-1`; generic prompts only, never your DNA)
 - `--portrait N`  N speculative DNA-based portrait variants (needs `IMAGE_API_KEY`)
 - `--env path`    a .env file holding optional API keys
 
@@ -86,6 +86,8 @@ frozen reference data** (`reference/*.json`: SNPedia haplogroup DB, 1000G freque
 Catalog PRS weights, CPIC/carrier catalogs, mtDNA PhyloTree). No personal data is bundled; the
 SNP catalog is keyed by genotype so it works for anyone. Refresh reference data with
 `python scripts/refresh_reference.py` (opt-in, online).
+
+Many clinical variants are on the 23andMe chip only under internal "i" IDs. Each catalog entry lists its probes. The first probe with a call is used. Check the probes against your own file with `python scripts/verify_probes.py YOUR_FILE` (prints no genotypes).
 
 ## Getting more markers (imputation vs sequencing)
 A genotyping chip reads a fixed subset of positions. Two ways to expand it:
