@@ -95,6 +95,14 @@ A genotyping chip reads a fixed subset of positions. Two ways to expand it:
   plus things arrays can't resolve — e.g. **CYP2D6 copy number** and **full BRCA / carrier-gene
   sequencing** (not just founder SNPs).
 
+### Before you buy whole-genome sequencing
+WGS prices change frequently. Most sales are short coupon codes, not changes to the list price.
+- Use an agent (for example a scheduled Claude Code task) to watch the prices every day.
+- Compare the same product: 30x coverage, raw data download (FASTQ, BAM/CRAM, VCF) included.
+- Compare the total price for your order, including duo or family bundles and shipping.
+- Make sure that the provider ships to your country. Some "worldwide" offers exclude countries at checkout.
+- Make sure that you can download the raw data. Then this dashboard can read the VCF file.
+
 ### Using a whole-genome VCF
 Give the VCF file from your sequencing provider (Dante Labs, tellmeGen, Nebula, …) to `--input`.
 - The engines use approximately 475 rsIDs. A WGS VCF file frequently has no rsIDs.
